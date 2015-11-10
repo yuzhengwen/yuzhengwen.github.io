@@ -1,1 +1,211 @@
-"Hello World" 
+<!DOCTYPE html>
+<html>
+
+    <div id="sideMenu">
+        Side
+    </div>
+    <div id="scrolling">
+        <div id="scrollUp" onclick="scrollUp();">
+            <img src="https://dl.dropbox.com/s/lg7d366zcahrjc8/up-arrow.png?dl=0">
+        </div>
+        <!--https://www.iconfinder.com/icons/186407/arrow%2Cup%2Carrow_up_icon#size=48 -->
+        <div id="scrollDown" onclick="scrollDown();">
+            <img
+            src="https://dl.dropbox.com/s/99q78t8hv1vbc8r/down-arrow.png?dl=0">
+        </div>
+        <!--https://www.iconfinder.com/icons/186411/arrow%2Cdown_icon#size=48 -->
+    </div>
+
+    <div id="popup" class="fixed">
+        Welcome to my site
+        <br>
+        <br>
+        <form>
+            Sign Up For Mailing List:
+            <input id="mailingListSignUp" type="email">
+            <input
+            type="submit" onclick="mailingListValidatation()" value="I'm in">
+        </form>
+        <button onclick="closePopup()" class="fixed" id="closePopup">
+            X
+        </button>
+    </div>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <title>Yuzhengwen</title>
+        <link rel="stylesheet" type="text/css" href="CSS/index.css">
+        <link rel="stylesheet" type="text/css" href="Slider/slider.css">
+        <link rel="stylesheet" type="text/css" href="CSS/responsive.css"
+        media="screen and (max-width:960px)">
+        <link rel="shortcut icon" href="/favicon.ico" type="image/icon">
+        <link rel="icon" href="/favicon.ico" type="image/icon">
+    </head>
+
+    <body onload="popup(); setUpSlider(); autoSlide();">
+        <script type="text/javascript" src="Javascript/main.js"></script>
+        <script type="text/javascript" src="Javascript/Animation.js"></script>
+        <script type="text/javascript" src="Slider/slider.js"></script>
+        <div id="wrapper">
+            <header>
+                <h1><a href="index.html">YUZHENGWEN</a></h1>
+                <nav>
+                    <div id="mobile-nav-icon">
+                        <img src="https://dl.dropbox.com/s/fpv0smfjfcu9gvj/nav-icon.png?dl=0" onclick="showNav()">
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="private.html">Private</a>
+                        </li>
+                        <li class="dropdownMenu">
+                            <a href="#">Follow ></a>
+                            <ul>
+                                <li>
+                                    <a href="follow-email.html">Email</a>
+                                </li>
+                                <li>
+                                    <a href="follow-socialmedia.html">Social Media</a>
+                                </li>
+                                <li>
+                                    <a href="follow-rss.html">RSS</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="contact.php">Contact</a>
+                        </li>
+                        <li>
+                            <a href="about.html">About</a>
+                        </li>
+                        <li>
+                            <a href="blog.html">Blog</a>
+                        </li>
+                        <li>
+                            <a id="onLink" href="index.html">Home</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <br>
+            <div id="callToAction">
+                <!-- Slider -->
+                <div id="slider-container">
+                    <img id="slider-img" alt="Slider-Image">
+                    <div id="prev">
+                        <img onclick="prevSlide();"
+                        src="https:/dl.dropbox.com/s/zpuv07xh30g8nff/left-arrow.png?dl=0">
+                    </div>
+                    <div id="next">
+                        <img onclick="nextSlide();"
+                        src="https://dl.dropbox.com/s/erps8ew8ra547ub/right-arrow.png?dl=0">
+                    </div>
+                    <div id="play" onclick="play();">
+                        Play
+                    </div>
+                    <div id="stop" onclick="stop();">
+                        Stop
+                    </div>
+                </div>
+                <!-- Slider end -->
+                <a title="Link To Google" href="http://www.google.com">
+                <button>
+                    <h2>Call To Action</h2>
+                </button> </a>
+
+            </div>
+            <br>
+            <div id="content">
+                <h2>Header 2</h2>
+                <div class="columnText">
+                    <h3>Section 1</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Vestibulum a sollicitudin tellus, eu accumsan diam. Quisque eget
+                        metus eros. Cras lobortis vitae elit nec feugiat. Cum sociis
+                        natoque penatibus et magnis dis parturient montes, nascetur
+                        ridiculus mus. Phasellus id lobortis erat, eu auctor neque. Donec a
+                        magna turpis. Sed tincidunt risus ut lorem malesuada, et pretium
+                        eros suscipit.
+                    </p>
+                </div>
+                <div class="columnText">
+                    <h3>Section 2</h3>
+                    <p>
+                        Vivamus quis mi lectus. Etiam pretium augue sed efficitur
+                        gravida. Morbi mauris massa, maximus at velit eu, pulvinar luctus
+                        mi. Proin rutrum venenatis eleifend. Nam at tincidunt diam. Aliquam
+                        tempor lorem id bibendum rhoncus. Duis quis est turpis. In laoreet
+                        tincidunt congue. Donec hendrerit tellus eu purus varius, a sodales
+                        lorem elementum. Maecenas tincidunt quam vitae enim pellentesque,
+                        ultricies pretium nisl congue. Phasellus sit amet est lectus.
+                        Suspendisse quis felis leo. Praesent non sem orci. In ac placerat
+                        orci, eget hendrerit lectus.
+                    </p>
+                </div>
+                <div class="columnText">
+                    <h3>Section 3</h3>
+                    <p>
+                        Suspendisse ac ligula massa. Mauris libero augue, varius
+                        vitae blandit quis, mollis nec ipsum. Proin orci lacus, lobortis a
+                        aliquam in, egestas nec ipsum. Cras a congue libero. Proin pulvinar
+                        tempus lorem id convallis. Vivamus nec dapibus tellus. Donec
+                        ullamcorper odio sit amet scelerisque hendrerit. Mauris ligula
+                        nibh, varius nec urna non, vulputate lobortis odio. Duis lobortis
+                        sem id lacus pulvinar ullamcorper.
+                    </p>
+                </div>
+                <table>
+                    <caption>
+                        A Table
+                    </caption>
+                    <tr>
+                        <th>Table Row</th>
+                        <th>Number</th>
+                    </tr>
+                    <tr>
+                        <td>Table Row One</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>Table Row Two</td>
+                        <td>3</td>
+                    </tr>
+                </table>
+                <div class="box">
+                    Box
+                </div>
+                <div id="movingBox" onmouseenter="moveBox()">
+                    Box
+                </div>
+            </div>
+            <div id="sidebar">
+                <p>
+                    Sidebar
+                </p>
+            </div>
+            <footer>
+                <ul>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="terms-and-conditions.html">Terms And
+                        Conditions</a>
+                    </li>
+                    <li>
+                        <a href="blog.html">Blog</a>
+                    </li>
+                    <li>
+                        <a href="sitemap.html">Sitemap</a>
+                    </li>
+                </ul>
+                <a id="copyright" href="yuzhengwen.html">@Copyright Yuzhengwen <?php echo date(Y, time()); ?></a>
+            </footer>
+        </div>
+    </body>
+
+</html>
