@@ -5,8 +5,8 @@
 
 #wrapper {
     font-family: "Times New Roman", Times, serif;
-    width: 85%;
-    max-width: 85%;
+    width: 90%;
+    max-width: 90%;
     margin: 0px auto;
     padding: 5px;
 }
@@ -62,28 +62,6 @@ h1 a {
 
 h1 a:HOVER, h1 a:ACTIVE, h1 a:FOCUS {
     text-decoration: none;
-}
-
-h2 ~
-p {
-    background-color: lightblue;
-}
-
-table {
-    border: 5px solid black;
-    width: 100%;
-}
-
-tr > th {
-    background-color: orange;
-}
-
-tr > td {
-    background-color: yellow
-}
-
-th, td {
-    border: 2px solid blue;
 }
 
 header {
@@ -173,39 +151,12 @@ nav ul li a:HOVER, nav ul li a:ACTIVE, nav ul li a:FOCUS, nav ul li a#onLink {
     z-index: 10;
 }
 
-#closePopup {
-    display: none;
-    font-weight: bolder;
-    background-color: red;
-    border: 3px solid black;
-    right: 13%;
-    top: 20%;
-    height: 35px;
-    width: 35px;
-    z-index: 10;
-}
-
-#closePopup:HOVER {
-    cursor: pointer;
-    background-color: #cb0004;
-}
-
-#sideMenu {
-    width: 6%;
-    height: 250px;
-    background-color: #75fcfe;
-    border: 7px dotted blue;
-    position: fixed;
-    left: 0 !important;
-    top: 25% !important;
-}
-
 #scrolling {
     width: 4%;
     height: 130px;
     background-color: transparent;
     position: fixed;
-    left: 0;
+    left: 10px;
     top: 70%;
 }
 
@@ -226,9 +177,6 @@ nav ul li a:HOVER, nav ul li a:ACTIVE, nav ul li a:FOCUS, nav ul li a#onLink {
 #scrollDown:HOVER, #scrollUp:HOVER {
     background-color: #b2b2b2;
     display: block;
-    border: 3px solid gray;
-    -moz-border-radius: 8px;
-    border-radius: 8px;
     cursor: pointer;
 }
 
@@ -237,29 +185,31 @@ nav ul li a:HOVER, nav ul li a:ACTIVE, nav ul li a:FOCUS, nav ul li a#onLink {
 }
 
 .behind {
-    /*position: relative;
-     left: 50px;
-     top: -100px;
-     */
     z-index: -1;
 }
 
 #content {
     min-height: 750px;
-    width: 66.66667%;
+    width: 70%;
     float: left;
     background-color: white;
-    padding: 10px;
+    padding: 30px;
     -moz-border-radius: 20px;
     border-radius: 20px;
     box-shadow: 10px 10px 5px #888888;
+}
+h2{
+	font-size: 40px;
+}
+#content{
+	font-size: larger;
 }
 
 #sidebar {
     display: block;
     float: right;
     min-height: 750px;
-    width: 28%;
+    width: 22%;
     background-color: white;
     padding: 8px;
     -moz-border-radius: 20px;
@@ -276,18 +226,6 @@ nav ul li a:HOVER, nav ul li a:ACTIVE, nav ul li a:FOCUS, nav ul li a#onLink {
     box-shadow: 10px 10px 5px #888888;
     padding: 10px;
     background-image: url("https://dl.dropbox.com/s/yyxh4ghle8askv7/clear%20sky.jpg?dl=0");
-}
-
-.columnText {
-    display: inline-block;
-    padding: 5px;
-    width: 30%;
-    height: 200px;
-    margin: 10px 5px;
-    text-align: center;
-    word-wrap: break-word;
-    background-color: #aaaaaa;
-    overflow: auto;
 }
 footer {
     position: relative;
@@ -326,4 +264,24 @@ footer ul li {
     max-width: 1180px;
     text-align: center;
     display: block;
+}
+#sideMenu {
+	position: fixed;
+    height: auto;
+    width: 6%;
+    left: 0 !important;
+    top: 25% !important;
+    background-color: #F0F0F0;
+	border-radius: 10px;
+	text-align: center;
+	padding: 5px 0;
+    box-shadow: 7px 7px 4px #888888;
+}
+ul.share-buttons{
+  list-style: none;
+  padding: 0;
+}
+
+ul.share-buttons li{
+  display: inline;
 }

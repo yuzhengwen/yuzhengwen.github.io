@@ -1,28 +1,3 @@
-var poppedup = false;
-
-function popup() {
-    var closeButton = document.getElementById("closePopup");
-    var popupBox = document.getElementById("popup");
-
-    popupBox.style.display = "block";
-    closeButton.style.display = "block";
-}
-
-function closePopup() {
-    var closeButton = document.getElementById("closePopup");
-    var popup = document.getElementById("popup");
-
-    popup.style.display = "none";
-    closeButton.style.display = "none";
-}
-
-function callToActionClicked() {
-    window.open("http://www.google.com", "_self");
-}
-
-function mailingListValidation() {
-
-}
 
 // variables for scrolling stuff
 var dy = 17;

@@ -1,9 +1,22 @@
 <!DOCTYPE html>
 <html>
-
     <div id="sideMenu">
-        Side
-    </div>
+	<b>Share:</b>
+	
+	<ul class="share-buttons">
+  <li>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fyuzhengwen.github.io%2F&t=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img src="images/flat_web_icon_set/color/Facebook.png" height="35"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Fyuzhengwen.github.io%2F&text=:%20http%3A%2F%2Fyuzhengwen.github.io%2F&via=yuzhengwen" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img src="images/flat_web_icon_set/color/Twitter.png"height="35"></a></li>
+  <li><a href="https://plus.google.com/share?url=http%3A%2F%2Fyuzhengwen.github.io%2F" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img src="images/flat_web_icon_set/color/Google+.png"height="35"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fyuzhengwen.github.io%2F&description=" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img src="images/flat_web_icon_set/color/Pinterest.png"height="35"></a></li>
+  <li><a href="https://getpocket.com/save?url=http%3A%2F%2Fyuzhengwen.github.io%2F&title=" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img src="images/flat_web_icon_set/color/Pocket.png"height="35"></a></li>
+  <li><a href="http://www.reddit.com/submit?url=http%3A%2F%2Fyuzhengwen.github.io%2F&title=" target="_blank" title="Submit to Reddit" onclick="window.open('http://www.reddit.com/submit?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img src="images/flat_web_icon_set/color/Reddit.png"height="35"></a></li>
+  <li><a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fyuzhengwen.github.io%2F&title=&summary=&source=http%3A%2F%2Fyuzhengwen.github.io%2F" target="_blank" title="Share on LinkedIn" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img src="images/flat_web_icon_set/color/LinkedIn.png"height="35"></a></li>
+  <li><a href="mailto:?subject=&body=:%20http%3A%2F%2Fyuzhengwen.github.io%2F" target="_blank" title="Email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img src="images/flat_web_icon_set/color/Email.png"height="35"></a>
+  </li>
+</ul>
+
+	</div>
     <div id="scrolling">
         <div id="scrollUp" onclick="scrollUp();">
             <img src="https://dl.dropbox.com/s/lg7d366zcahrjc8/up-arrow.png?dl=0">
@@ -28,7 +41,12 @@
         </button>
     </div>
 
-    <head>
+    <head><script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript" src="http://s.sharethis.com/loader.js"></script>
+	<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript" src="http://s.sharethis.com/loader.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
         <title>Yuzhengwen</title>
@@ -39,8 +57,7 @@
         <link rel="shortcut icon" href="/favicon.ico" type="image/icon">
         <link rel="icon" href="/favicon.ico" type="image/icon">
     </head>
-
-    <body onload="popup(); setUpSlider(); autoSlide();">
+    <body onload="setUpSlider(); autoSlide();">
         <script type="text/javascript" src="Javascript/main.js"></script>
         <script type="text/javascript" src="Javascript/Animation.js"></script>
         <script type="text/javascript" src="Slider/slider.js"></script>
@@ -103,67 +120,48 @@
             </div>
             <br>
             <div id="content">
-                <h2>Header 2</h2>
-                <div class="columnText">
-                    <h3>Section 1</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Vestibulum a sollicitudin tellus, eu accumsan diam. Quisque eget
-                        metus eros. Cras lobortis vitae elit nec feugiat. Cum sociis
-                        natoque penatibus et magnis dis parturient montes, nascetur
-                        ridiculus mus. Phasellus id lobortis erat, eu auctor neque. Donec a
-                        magna turpis. Sed tincidunt risus ut lorem malesuada, et pretium
-                        eros suscipit.
-                    </p>
-                </div>
-                <div class="columnText">
-                    <h3>Section 2</h3>
-                    <p>
-                        Vivamus quis mi lectus. Etiam pretium augue sed efficitur
-                        gravida. Morbi mauris massa, maximus at velit eu, pulvinar luctus
-                        mi. Proin rutrum venenatis eleifend. Nam at tincidunt diam. Aliquam
-                        tempor lorem id bibendum rhoncus. Duis quis est turpis. In laoreet
-                        tincidunt congue. Donec hendrerit tellus eu purus varius, a sodales
-                        lorem elementum. Maecenas tincidunt quam vitae enim pellentesque,
-                        ultricies pretium nisl congue. Phasellus sit amet est lectus.
-                        Suspendisse quis felis leo. Praesent non sem orci. In ac placerat
-                        orci, eget hendrerit lectus.
-                    </p>
-                </div>
-                <div class="columnText">
-                    <h3>Section 3</h3>
-                    <p>
-                        Suspendisse ac ligula massa. Mauris libero augue, varius
-                        vitae blandit quis, mollis nec ipsum. Proin orci lacus, lobortis a
-                        aliquam in, egestas nec ipsum. Cras a congue libero. Proin pulvinar
-                        tempus lorem id convallis. Vivamus nec dapibus tellus. Donec
-                        ullamcorper odio sit amet scelerisque hendrerit. Mauris ligula
-                        nibh, varius nec urna non, vulputate lobortis odio. Duis lobortis
-                        sem id lacus pulvinar ullamcorper.
-                    </p>
-                </div>
-                <table>
-                    <caption>
-                        A Table
-                    </caption>
-                    <tr>
-                        <th>Table Row</th>
-                        <th>Number</th>
-                    </tr>
-                    <tr>
-                        <td>Table Row One</td>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>Table Row Two</td>
-                        <td>3</td>
-                    </tr>
-                </table>
+                <h2>INTRODUCTION</h2>
+				<p>
+				Hello, guys. I do many projects, such as: 
+				<OL>
+					<LI>Android
+					<UL>
+						<li>ROMs</li>
+						<li>Mods</li>
+						<li>Themes</li>
+					</UL>
+						<li>Random Java programs</li>
+						<li>Minecraft mods</li>
+				</OL>
+				<br>
+				Do poke around this website as there will be links for all of my projects.
+				</p>
             </div>
             <div id="sidebar">
-                <p>
-                    Sidebar
-                </p>
+				<script>
+				  (function() {
+					var cx = '011944775746643820447:snsiumxaltw';
+					var gcse = document.createElement('script');
+					gcse.type = 'text/javascript';
+					gcse.async = true;
+					gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+						'//cse.google.com/cse.js?cx=' + cx;
+					var s = document.getElementsByTagName('script')[0];
+					s.parentNode.insertBefore(gcse, s);
+				  })();
+				</script>
+				<gcse:search></gcse:search>
+
+				<ul>
+					<li>Android</li>
+					<ul>
+					    <li><a href="yrompower.html">[XperiaZ3] [ROM] YRom POWER Edition: Release the POWER!</a></li>
+					</ul>
+					<li>Minecraft Mods</li>
+					<ul>
+					    <li> Minecraft [1.7] YCraft</li>
+					</ul>
+				</ul>
             </div>
             <footer>
                 <ul>
@@ -184,6 +182,6 @@
                 <a id="copyright" href="yuzhengwen.html">@Copyright Yuzhengwen <?php echo date(Y, time()); ?></a>
             </footer>
         </div>
+		
     </body>
-
 </html>
