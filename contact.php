@@ -92,9 +92,9 @@
             <footer>
                 <ul>
                     <li>
-                        <a href="contact.html">Contact</a>
+                        <a href="contact.php">Contact</a>
                     </li>
-                    <li>
+                 <!--  <li>
                         <a href="about.html">About</a>
                     </li>
                     <li>
@@ -105,9 +105,9 @@
                     </li>
                     <li>
                         <a href="sitemap.html">Sitemap</a>
-                    </li>
+                    </li>  There aren't such sites here -->
                 </ul>
-                <a id="copyright" href="yuzhengwen.html">@Copyright Yuzhengwen <?php echo date(Y, time()); ?></a>
+                <a id="copyright" href="yuzhengwen.html">@Copyright Yuzhengwen <?php echo date('Y', time()); ?></a>
             </footer>
         </div>
     </body>

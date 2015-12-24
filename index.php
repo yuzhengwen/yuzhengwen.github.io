@@ -2,17 +2,17 @@
 <html>
     <div id="sideMenu">
 	<b>Share:</b>
-	
+
 	<ul class="share-buttons">
   <li>
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fyuzhengwen.github.io%2F&t=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img src="images/flat_web_icon_set/color/Facebook.png" height="35"></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Fyuzhengwen.github.io%2F&text=:%20http%3A%2F%2Fyuzhengwen.github.io%2F&via=yuzhengwen" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img src="images/flat_web_icon_set/color/Twitter.png"height="35"></a></li>
-  <li><a href="https://plus.google.com/share?url=http%3A%2F%2Fyuzhengwen.github.io%2F" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img src="images/flat_web_icon_set/color/Google+.png"height="35"></a></li>
-  <li><a href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fyuzhengwen.github.io%2F&description=" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img src="images/flat_web_icon_set/color/Pinterest.png"height="35"></a></li>
-  <li><a href="https://getpocket.com/save?url=http%3A%2F%2Fyuzhengwen.github.io%2F&title=" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img src="images/flat_web_icon_set/color/Pocket.png"height="35"></a></li>
-  <li><a href="http://www.reddit.com/submit?url=http%3A%2F%2Fyuzhengwen.github.io%2F&title=" target="_blank" title="Submit to Reddit" onclick="window.open('http://www.reddit.com/submit?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img src="images/flat_web_icon_set/color/Reddit.png"height="35"></a></li>
-  <li><a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fyuzhengwen.github.io%2F&title=&summary=&source=http%3A%2F%2Fyuzhengwen.github.io%2F" target="_blank" title="Share on LinkedIn" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img src="images/flat_web_icon_set/color/LinkedIn.png"height="35"></a></li>
-  <li><a href="mailto:?subject=&body=:%20http%3A%2F%2Fyuzhengwen.github.io%2F" target="_blank" title="Email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img src="images/flat_web_icon_set/color/Email.png"height="35"></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fyuzhengwen.github.io%2F&t=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img src="Images/flat_web_icon_set/color/Facebook.png" height="35"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Fyuzhengwen.github.io%2F&text=:%20http%3A%2F%2Fyuzhengwen.github.io%2F&via=yuzhengwen" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img src="Images/flat_web_icon_set/color/Twitter.png"height="35"></a></li>
+  <li><a href="https://plus.google.com/share?url=http%3A%2F%2Fyuzhengwen.github.io%2F" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img src="Images/flat_web_icon_set/color/GooglePlus.png"height="35"></a></li>
+  <li><a href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fyuzhengwen.github.io%2F&description=" target="_blank" title="Pin it" onclick="window.open('http://pinterest.com/pin/create/button/?url=' + encodeURIComponent(document.URL) + '&description=' +  encodeURIComponent(document.title)); return false;"><img src="Images/flat_web_icon_set/color/Pinterest.png"height="35"></a></li>
+  <li><a href="https://getpocket.com/save?url=http%3A%2F%2Fyuzhengwen.github.io%2F&title=" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img src="Images/flat_web_icon_set/color/Pocket.png"height="35"></a></li>
+  <li><a href="http://www.reddit.com/submit?url=http%3A%2F%2Fyuzhengwen.github.io%2F&title=" target="_blank" title="Submit to Reddit" onclick="window.open('http://www.reddit.com/submit?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img src="Images/flat_web_icon_set/color/Reddit.png"height="35"></a></li>
+  <li><a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fyuzhengwen.github.io%2F&title=&summary=&source=http%3A%2F%2Fyuzhengwen.github.io%2F" target="_blank" title="Share on LinkedIn" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img src="Images/flat_web_icon_set/color/LinkedIn.png"height="35"></a></li>
+  <li><a href="mailto:?subject=&body=:%20http%3A%2F%2Fyuzhengwen.github.io%2F" target="_blank" title="Email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img src="Images/flat_web_icon_set/color/Email.png"height="35"></a>
   </li>
 </ul>
 
@@ -33,7 +33,7 @@
         <b>Welcome to my site</b>
         <br>
         <br>
-		This is where I upload all my works 
+		This is where I upload all my works
 		<br>
 		Enjoy :)
         <button onclick="closePopup()" class="fixed" id="closePopup">
@@ -122,7 +122,7 @@
             <div id="content">
                 <h2>INTRODUCTION</h2>
 				<p>
-				Hello, guys. I do many projects, such as: 
+				Hello, guys. I do many projects, such as:
 				<OL>
 					<LI>Android
 					<UL>
@@ -166,22 +166,24 @@
             <footer>
                 <ul>
                     <li>
-                        <a href="contact.html">Contact</a>
+                        <a href="contact.php">Contact</a>
                     </li>
-                    <li>
-                        <a href="about.html">About</a>
-                    </li>
-                    <li>
-                        <a href="terms-and-conditions.html">Terms And
-                        Conditions</a>
-                    </li>
-                    <li>
-                        <a href="sitemap.html">Sitemap</a>
-                    </li>
+                    <!--  <li>
+                           <a href="about.html">About</a>
+                       </li>
+                       <li>
+                           <a href="terms-and-conditions.html">Terms And Conditions</a>
+                       </li>
+                       <li>
+                           <a href="blog.html">Blog</a>
+                       </li>
+                       <li>
+                           <a href="sitemap.html">Sitemap</a>
+                       </li>  There aren't such sites here -->
                 </ul>
-                <a id="copyright" href="yuzhengwen.html">@Copyright Yuzhengwen <?php echo date(Y, time()); ?></a>
+                <a id="copyright" href="yuzhengwen.html">@Copyright Yuzhengwen <?php echo date('Y', time()); ?></a>
             </footer>
         </div>
-		
+
     </body>
 </html>
