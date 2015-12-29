@@ -2,9 +2,12 @@
     font-family: typoster;
     src: url("https://dl.dropbox.com/s/c9bfa4l2wc4ny6p/Typoster_demo.otf?dl=0");
 }
+@font-face{
+	font-family: 'Roboto', sans-serif;
+}
 
 #wrapper {
-    font-family: "Times New Roman", Times, serif;
+    font-family: Roboto;
     width: 90%;
     max-width: 90%;
     margin: 0px auto;
@@ -22,13 +25,13 @@ body {
 }
 
 a:HOVER, a:ACTIVE, a:FOCUS {
-    color: #0000a5;
-    text-decoration: underline;
+    color: #1D97BF;
 }
 
 a {
     text-decoration: none;
-    color: blue;
+    color: #85A1AB;
+	font-weight: bold;
 }
 
 .private {
@@ -93,8 +96,6 @@ nav ul {
 
 nav ul li {
     text-align: center;
-    width: 90px;
-    /*Go from right to left*/
     float: right;
     text-transform: uppercase;
 }
@@ -104,32 +105,17 @@ nav ul li a {
     text-align: center;
     background-color: orange;
     display: block;
-    border: 1px solid #868686;
-    padding: 10px 0;
+    padding: 18px;
     text-decoration: none;
     -moz-border-radius: 4px;
-    border-radius: 4px;
     transition: background 0.1s linear;
 }
 
 nav ul li a:HOVER, nav ul li a:ACTIVE, nav ul li a:FOCUS, nav ul li a#onLink {
     background-color: #df6e06;
-    border: 1px solid #54535c;
     font-weight: bolder;
     color: black;
     text-decoration: none;
-}
-
-.dropdownMenu ul {
-    display: none;
-}
-
-.dropdownMenu:HOVER ul, .dropdownMenu:FOCUS ul #dropdownMenu:ACTIVE ul {
-    display: block;
-}
-
-.dropdownMenu ul li a:HOVER {
-    background-color: #fb8c00;
 }
 
 #specialText {
@@ -200,9 +186,6 @@ nav ul li a:HOVER, nav ul li a:ACTIVE, nav ul li a:FOCUS, nav ul li a#onLink {
 }
 h2{
 	font-size: 40px;
-}
-#content{
-	font-size: larger;
 }
 
 #sidebar {
