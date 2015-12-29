@@ -16,6 +16,7 @@ var minCount = 0;
 function setUpSlider() {
     image = document.getElementById('slider-img');
     image.src = imagesToDisplay[imageCount];
+	autoSlide();
 }
 
 function autoSlide() {
