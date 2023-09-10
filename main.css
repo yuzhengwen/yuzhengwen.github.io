@@ -10,15 +10,19 @@ body{
 }
 
 header{
-    position:relative;
+    position: relative;
+    /* flexbox container
+    justifycontent spacebtw places elements at start and end
+    align */
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     top: 0;
     left: 0;
     margin-bottom: 5%;
     width: 100%;
     background-color: black;
-    justify-content: space-between;
-    align-items: center;
     color:aliceblue;
     text-transform: uppercase;
 }
@@ -34,14 +38,17 @@ header ul{
     list-style: none;
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
-    margin-right:10%;
+    margin-right: 10%;
+}
+header ul li {
+    padding: 5%;
 }
 
 header ul li a{
     text-decoration: none;
-    padding: 5%;
+    white-space: nowrap;
 }
 
 .box_wrapper{
