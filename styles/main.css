@@ -2,6 +2,8 @@
 
 * {
     box-sizing: border-box;
+    --defColor: rgb(180, 183, 189);
+    --hoverColor: rgb(97, 79, 145);
 }
 
 body{
@@ -34,11 +36,11 @@ header .logo{
     font-size: 2em;
     margin-left:10%;
     text-decoration: none;
-    color:aliceblue;
+    color: var(--defColor);
 }
 header .logo:hover{
     transition: 0.3s;
-    color:rgb(97, 79, 145);
+    color: var(--hoverColor);
 }
 
 header ul{
@@ -57,11 +59,11 @@ header ul li {
 header ul li a{
     text-decoration: none;
     white-space: nowrap;
-    color:aliceblue;
+    color: var(--defColor);
 }
 
 header ul li a:hover{
-    color:rgb(97, 79, 145);
+    color: var(--hoverColor);
     transition: 0.3s;
 }
 
