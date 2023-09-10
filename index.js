@@ -8,7 +8,8 @@ function checkBoxes() {
     console.log(triggerBottom);
 
     boxes.forEach(box => {
-        const boxTop = box.getBoundingClientRect.top;
+        console.log(box.className)
+        const boxTop = box.getBoundingClientRect().top;
         console.log(boxTop);
 
         if (boxTop < triggerBottom){
