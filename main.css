@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(25, 18, 51);
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+
+    overflow-x: hidden;
+}
+
+h1{
+    color:aliceblue;
+    text-transform: uppercase;
+    margin: 3%;
+}
+
+.box{
+    background-color: var(--clr);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    height: 200px;
+    margin: 1%;
+    border-radius: 20px;
+
+    transform: translateX(300%);
+    transition: transform 0.4s ease;
+}
+
+.box:nth-of-type(even){
+    transform: translateX(-300%);
+    transition: transform 0.4s ease;
+}
+
+
+.box.show{
+    transform: translateX(0);
+}
+
+.art{
+    --clr: rgb(47, 28, 99);
+}
+
+.model{
+    --clr: rgb(47, 28, 99);
+}
+
+.webdev{
+    --clr: rgb(47, 28, 99);
+}
+
+.gamedev{
+    --clr: rgb(47, 28, 99);
+}
