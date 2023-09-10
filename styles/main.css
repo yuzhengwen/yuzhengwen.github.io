@@ -11,11 +11,11 @@ body{
     overflow-x: hidden;
 }
 
+/* flexbox container
+justifycontent spacebtw places elements at start and end
+align-items is to align secondary */
 header{
     position: relative;
-    /* flexbox container
-    justifycontent spacebtw places elements at start and end
-    align */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -36,6 +36,10 @@ header .logo{
     text-decoration: none;
     color:aliceblue;
 }
+header .logo:hover{
+    transition: 0.3s;
+    color:rgb(97, 79, 145);
+}
 
 header ul{
     list-style: none;
@@ -48,17 +52,17 @@ header ul{
 header ul li {
     padding: 5%;
     font-weight: 700;
-    color:aliceblue;
 }
 
 header ul li a{
     text-decoration: none;
     white-space: nowrap;
+    color:aliceblue;
 }
 
 header ul li a:hover{
-    color: #fff;
-    transition: 0.5s;
+    color:rgb(97, 79, 145);
+    transition: 0.3s;
 }
 
 .floating{
@@ -104,15 +108,15 @@ header ul li a:hover{
     --clr: rgba(124, 90, 142, 0.5);
 }
 .art{
-    --clr: rgb(47, 28, 99, 0.5);
+    --clr: rgb(97, 79, 14, 0.5);
 }
 
 .model{
-    --clr: rgb(47, 28, 99, 0.5);
+    --clr: rgb(97, 79, 14, 0.5);
 }
 
 .webdev{
-    --clr: rgb(47, 28, 99, 0.5);
+    --clr: rgb(97, 79, 14, 0.5);
 }
 
 .gamedev{
