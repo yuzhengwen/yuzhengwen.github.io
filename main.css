@@ -9,25 +9,39 @@ body{
     overflow-x: hidden;
 }
 
-.header{
+header{
+    position:relative;
+    display: flex;
+    top: 0;
+    left: 0;
+    margin-bottom: 5%;
+    width: 100%;
+    background-color: black;
+    justify-content: space-between;
+    align-items: center;
     color:aliceblue;
     text-transform: uppercase;
-    margin-bottom: 5%;
 }
 
-.header h1{
-    margin-left:10%
+header .logo{
+    position: relative;
+    font-size: 2em;
+    margin-left:10%;
+    text-decoration: none;
 }
 
-.header_menu{
+header ul{
+    list-style: none;
+    position: relative;
     display: flex;
-    flex-direction: row;
-    justify-content: right;
+    justify-content: center;
+    align-items: center;
+    margin-right:10%;
 }
 
-.header_menu li{
-    display:inline;
-    margin: 1%;
+header ul li a{
+    text-decoration: none;
+    padding: 5%;
 }
 
 .box_wrapper{
