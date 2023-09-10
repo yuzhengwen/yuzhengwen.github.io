@@ -54,6 +54,11 @@ header ul li a{
     text-decoration: none;
     white-space: nowrap;
 }
+header ul li:hover{
+    background-color: rgb(47, 28, 99);
+    color: #fff;
+    transition: 0.5s;
+}
 
 .floating{
     position: fixed;
