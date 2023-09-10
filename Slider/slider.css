@@ -22,12 +22,16 @@
      centering element vertically*/
     top: 50%;
     margin-top: -24px;
+    max-width: 20px;
+    height: auto;
 }
 
 #slider-container #next {
     right: 0px;
     top: 50%;
     margin-top: -24px;
+    max-width: 20px;
+    height: auto;
 }
 
 #slider-img {
