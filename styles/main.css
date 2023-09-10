@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;600&display=swap');
+
 * {
     box-sizing: border-box;
 }
 
 body{
-    background-color: rgb(25, 18, 51);
-    font-family: sans-serif;
+    background-color: rgb(19, 16, 32);
+    font-family:'Dosis', sans-serif;
     margin: 0;
     overflow-x: hidden;
 }
@@ -25,7 +27,7 @@ header{
     background-color: rgb(0, 0, 1, 1);
     color:aliceblue;
     text-transform: uppercase;
-    z-index:100
+    z-index:100;
 }
 
 header .logo{
@@ -45,6 +47,7 @@ header ul{
 }
 header ul li {
     padding: 5%;
+    font-weight: 700;
 }
 
 header ul li a{
@@ -91,18 +94,21 @@ header ul li a{
     transition: transform 0.4s ease;
 }
 
+.landing{
+    --clr: rgba(124, 90, 142, 0.5);
+}
 .art{
-    --clr: rgb(47, 28, 99);
+    --clr: rgb(47, 28, 99, 0.5);
 }
 
 .model{
-    --clr: rgb(47, 28, 99);
+    --clr: rgb(47, 28, 99, 0.5);
 }
 
 .webdev{
-    --clr: rgb(47, 28, 99);
+    --clr: rgb(47, 28, 99, 0.5);
 }
 
 .gamedev{
-    --clr: rgb(47, 28, 99);
+    --clr: rgb(47, 28, 99, 0.5);
 }
