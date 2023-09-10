@@ -5,19 +5,35 @@
 body{
     background-color: rgb(25, 18, 51);
     font-family: sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.header{
+    color:aliceblue;
+    text-transform: uppercase;
+    margin-bottom: 5%;
+}
+
+.header h1{
+    margin-left:10%
+}
+
+.header_menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+.header_menu li{
+    display:inline;
+
+}
+
+.box_wrapper{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0;
-
-    overflow-x: hidden;
-}
-
-h1{
-    color:aliceblue;
-    text-transform: uppercase;
-    margin: 3%;
 }
 
 .box{
@@ -27,22 +43,23 @@ h1{
     flex-direction: column;
     align-items: center;
     width: 80%;
-    height: 200px;
+    height: 400px;
     margin: 1%;
     border-radius: 20px;
 
-    transform: translateX(300%);
+    /*transform: translateX(300%);*/
     transition: transform 0.4s ease;
 }
 
 .box:nth-of-type(even){
-    transform: translateX(-300%);
+    /*transform: translateX(-300%);*/
     transition: transform 0.4s ease;
 }
 
 
 .box.show{
     transform: translateX(0);
+    transition: transform 0.4s ease;
 }
 
 .art{
