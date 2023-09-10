@@ -107,20 +107,20 @@ header ul li a:hover{
 }
 
 .landing{
-    --clr: rgba(124, 90, 142, 0.5);
+    --clr: rgba(255, 255, 255, 0.3);
 }
 .art{
-    --clr: rgb(97, 79, 14, 0.5);
+    --clr: rgba(67, 45, 119, 0.5);
 }
 
 .model{
-    --clr: rgb(97, 79, 14, 0.5);
+    --clr: rgba(87, 50, 112, 0.5);
 }
 
 .webdev{
-    --clr: rgb(97, 79, 14, 0.5);
+    --clr: rgba(110, 42, 75, 0.5);
 }
 
 .gamedev{
-    --clr: rgb(47, 28, 99, 0.5);
+    --clr: rgba(99, 28, 39, 0.5);
 }
