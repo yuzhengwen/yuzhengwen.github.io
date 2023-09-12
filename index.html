@@ -20,7 +20,10 @@
     </div>
     <script>
     $(function(){
-      $("#header-placeholder").replaceWith("header.html");
+      //$("#header-placeholder").load("header.html");
+      $.get("/header.html #header-placeholder", function(data) {
+     $("#header-placeholder").replaceWith(data);
+});
     });
     </script>
 
