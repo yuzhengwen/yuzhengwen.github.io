@@ -13,6 +13,49 @@ body{
     overflow-x: hidden;
 }
 
+#scroll_top {   
+    all: reset; 
+    position: fixed;
+    bottom: 5%;
+    left: 2%;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1%;
+    border-radius: 50%;
+    border: none;
+
+    display: none;
+    animation: fade_out 0.5s
+}
+/* select elements with scrolltop id and class show*/
+#scroll_top.show{
+    display: block;
+    animation: fade_in 0.5s
+}
+@keyframes fade_in {
+     0% {
+          opacity: 0;
+          transform: scale(0)
+     }
+
+     100% {
+          opacity: 1;
+          transform: scale(1)
+     }
+}
+/* to debug later*/
+@keyframes fade_out {
+    0% {
+         opacity: 1;
+         transform: scale(1)
+    }
+
+    100% {
+         opacity: 0;
+         transform: scale(0)
+    }
+}
+
 /* header stuff
 position sticky gets weird if there is a parent element */
 #header-placeholder{
