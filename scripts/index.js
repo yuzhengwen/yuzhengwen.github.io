@@ -55,3 +55,10 @@ if (scrollTopButton != null){
 function scrollTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+
+lightbox.option({
+    imageFadeDuration: 300,
+    fadeDuration: 300,
+    resizeDuration: 300,
+})
