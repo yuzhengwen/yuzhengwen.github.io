@@ -1,7 +1,7 @@
 
 
 //floating header when scroll
-/*window.addEventListener('scroll', makeFloating);
+window.addEventListener('scroll', makeFloating);
 function makeFloating(){
 
     var header = document.querySelector("header");
@@ -14,7 +14,7 @@ document.querySelectorAll(".header_button").forEach((button) => {
         button.classList.add("active");
         button.setAttribute("aria-current", "page");
     }
-});*/
+});
 
 //boxes sliding in & scroll up button showing when scroll
 const boxes = document.querySelectorAll(".box");

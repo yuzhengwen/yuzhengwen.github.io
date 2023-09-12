@@ -10,6 +10,7 @@
     height: auto !important;  
     padding: 1%;
     filter: brightness(0.8);
+    z-index: 1;
 }
 
 .gallery img:hover{
@@ -18,4 +19,5 @@
     transform:scale(1.2);
     filter: brightness(1);
     transition: 0.3s;
+    z-index: 2;
 }
