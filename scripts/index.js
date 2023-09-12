@@ -33,23 +33,16 @@ function checkBoxes() {
     })
 }
 
+//scroll button
 window.addEventListener('scroll', displayScrollTop);
-const scrollTopButton = document.getElementById ("scroll_top");
-function displayScrollTop(){
-    scrollTopButton.classList.toggle("show", window.scrollY>0);
-}
 
-//on click of scroll up button
-//good practice to add listener instead of using html onclick=""
-scrollTopButton.addEventListener("click", scrollTop, false);
+function displayScrollTop(){
+    const scrollTopButton = document.getElementById("scroll_top");
+    scrollTopButton.classList.toggle("show", window.scrollY>0);
+    //good practice to add listener instead of using html onclick=""
+    scrollTopButton.addEventListener("click", scrollTop, false);
+}
 
 function scrollTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-
-//from https://www.jqueryscript.net/lightbox/lightbox2.html#google_vignette
-lightbox.option({
-    imageFadeDuration: 300,
-    fadeDuration: 300,
-    resizeDuration: 300,
-})
