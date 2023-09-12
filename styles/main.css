@@ -13,16 +13,12 @@ body{
     overflow-x: hidden;
 }
 
-/* flexbox container
-justifycontent spacebtw places elements at start and end
-align-items is to align secondary axis*/
+/* position sticky gets weird if there is a parent element */
 #header-placeholder{
     position: sticky;
     top: 0;
 }
 header{
-    position: sticky;
-    top: 0;
     left: 0;
     display: flex;
     flex-direction: row;
