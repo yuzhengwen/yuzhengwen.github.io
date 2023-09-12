@@ -13,7 +13,8 @@ body{
     overflow-x: hidden;
 }
 
-/* position sticky gets weird if there is a parent element */
+/* header stuff
+position sticky gets weird if there is a parent element */
 #header-placeholder{
     position: sticky;
     top: 0;
@@ -73,7 +74,7 @@ header .header_buttons a:hover{
     transition: 0.3s;
 }
 
-header .header_buttons a .header_button .active{
+.active{
     color: var(--hoverColor);
 }
 
@@ -85,7 +86,9 @@ header .header_buttons a .header_button .active{
     padding: 2%; 
     transition: 0.5s;
 }
+/* End header stuff*/
 
+/* Start Boxes stuff*/
 .box_wrapper{
     display: flex;
     flex-direction: column;
@@ -137,3 +140,4 @@ header .header_buttons a .header_button .active{
 .gamedev{
     --clr: rgba(99, 28, 39, 0.5);
 }
+/*End boxes stuff*/
