@@ -38,26 +38,20 @@ function checkBoxes() {
 
 function displayScrollTop(){
     
-    var scrollTop = document.querySelector("#scroll_top");
-    scrollTop.classList.toggle("show", window.scrollY>0);
-    console.log(scrollTop.className);
+    var scrollTopButton = document.querySelector("#scroll_top");
+    if (scrollTopButton != null){
+        scrollTopButton.classList.toggle("show", window.scrollY>0);
+        console.log(scrollTopButton.className);
+    }
 }
 
 //on click of scroll up button
 //good practice to add listener instead of using html onclick=""
-document.getElementById ("scroll_top").addEventListener ("click", scrollTop, false);
-
-function scrollTop() {
-    console.log("UP");
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+const scrollTopButton = document.getElementById ("scroll_top");
+if (scrollTopButton != null){
+    scrollTopButton.addEventListener("click", scrollTop, false);
 }
 
-//gallery
-document.querySelectorAll(".gallery img").addEventListener ("mouseover", darken(), false);
-function darken(){
-    const selected = document.querySelector(".gallery img:hover");
-    console.log(selected.className);
-    const body = document.querySelector("body");
-    body.classList.add("darken");
-    selected.classList.add("selected");
+function scrollTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
