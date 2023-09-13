@@ -184,3 +184,9 @@ header .header_button:hover{
     --clr: rgba(99, 28, 39, 0.5);
 }
 /*End boxes stuff*/
+
+#cv {
+    width: 90%;
+    height: 900px;
+    margin: auto;
+}
