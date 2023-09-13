@@ -9,12 +9,15 @@ function makeFloating(){
 }
 
 //setting current page to active on header
+$(document).ready(function() {
+console.log("NO OF BUTTONS: " + document.querySelectorAll(".header_button").length);
 document.querySelectorAll(".header_button").forEach((button) => {
     if (button.href === window.location.href) {
         button.classList.add("active");
         button.setAttribute("aria-current", "page");
     }
-});
+    console.log(button.href);
+});});
 
 //boxes sliding in & scroll up button showing when scroll
 const boxes = document.querySelectorAll(".box");
