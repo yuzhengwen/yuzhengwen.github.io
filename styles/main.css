@@ -167,22 +167,22 @@ header .logo:hover{
     transition: transform 0.4s ease;
 }
 
-.landing{
+.box1{
     --clr: rgba(255, 255, 255, 0.3);
 }
-.art{
+.box2{
     --clr: rgba(67, 45, 119, 0.5);
 }
 
-.model{
+.box3{
     --clr: rgba(87, 50, 112, 0.5);
 }
 
-.webdev{
+.box4{
     --clr: rgba(110, 42, 75, 0.5);
 }
 
-.gamedev{
+.box5{
     --clr: rgba(99, 28, 39, 0.5);
 }
 /*End boxes stuff*/
