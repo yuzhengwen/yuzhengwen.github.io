@@ -4,7 +4,8 @@
 window.addEventListener('scroll', makeFloating);
 function makeFloating(){
     var header = document.querySelector("header");
-    header.classList.toggle("floating", window.scrollY>0);
+    //header.classList.toggle("floating", window.scrollY>0);
+    header.classList.toggle("floating", document.body.scrollTop > header.offsetHeight || document.documentElement.scrollTop > header.offsetHeight);
 }
 
 //setting current page to active on header
