@@ -245,15 +245,6 @@ header .logo:hover{
         display: flex;
         animation: show_menu 0.5s;
     }
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    body {
-    position: relative;
-    width: 100%;
-    }
     /* Remove sliding in animation of boxes for mobile*/
     .box, .box:nth-of-type(even){
         transform: translateX(0);

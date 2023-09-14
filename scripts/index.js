@@ -136,7 +136,3 @@ function displayScrollTop(){
 function scrollTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-
-window.addEventListener("resize", () => {
-    var width = window.innerWidth;
-});
