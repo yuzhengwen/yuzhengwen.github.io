@@ -14,7 +14,6 @@
 
 .gallery img:hover{
     cursor: pointer;
-    position: relative;
     transform:scale(1.2);
     transition: 0.3s;
     z-index: 2;

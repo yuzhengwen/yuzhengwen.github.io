@@ -74,6 +74,7 @@ function addHeader(){
 
     setActive(headerButtons);
     setResponsive(menuButton, headerButtonWrapper);
+    var width = window.innerWidth;
 }
 
 //floating header when scroll
@@ -135,3 +136,7 @@ function displayScrollTop(){
 function scrollTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+window.addEventListener("resize", () => {
+    var width = window.innerWidth;
+});

@@ -130,6 +130,7 @@ header .logo:hover{
     padding: 3%; 
     font-size: smaller;
     transition: 0.3s;
+    width: 100%;
 }
 /* End header stuff*/
 
@@ -206,27 +207,31 @@ header .logo:hover{
     cursor: pointer;
     transition: 0.3s;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
     #mobile_menu {
         display: block;
     }
     header{
-        height: 10%;
+        height: 10vh;
     }
     header h1 {
         /*font-size: 4.5vw; */
-        font-size: 1.5em;
+        font-size: 6vh;
     }
     .header_buttons{
         display: none;
         position: fixed;
         flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background-color: var(--menuColor);
+        animation: hide_menu 0.5s;
         margin: 0;
-        top: 10%;
-        font-size: 1em;
+        right: 0 ;
+        top: 10vh;
+        font-size: 4vh;
         height: 60vh;
         width: 50vh;
-        background-color: var(--menuColor);
     }
         
     header .header_buttons a.header_button{
@@ -238,5 +243,43 @@ header .logo:hover{
     }
     .show_menu{
         display: flex;
+        animation: show_menu 0.5s;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+    position: relative;
+    width: 100%;
+    }
+    /* Remove sliding in animation of boxes for mobile*/
+    .box, .box:nth-of-type(even){
+        transform: translateX(0);
+    }
+    #scroll_top{
+        padding: 4%;
+    }
+    .floating a{
+        font-size: 100%;
+    }
+}
+
+/* Animation for menu sliding in for mobile*/
+@keyframes show_menu{
+    0% {
+        translate: 100%;
+    }
+    100% {
+        translate: 0;
+    }
+}
+@keyframes hide_menu{
+    0% {
+        translate: 0;
+    }
+    100% {
+        translate: -100%;
     }
 }
