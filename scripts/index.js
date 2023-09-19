@@ -1,6 +1,6 @@
 
 
-/* loading html using jquery
+/* loading html using jquery (prev method)
 $(function(){
     $("#header-placeholder").load("header.html");
 });
