@@ -34,13 +34,15 @@ function getNoOfImages(counter){
         {
             //file exists
             counter++;
+            console.log("img" + counter + " exists");
             getNoOfImages(counter+1)
         },
         error: function()
         {
+            console.log("img" + counter + " does not exist");
             //file not exists (counter will have the correct number of files in directory +1)
             // Now add the code under the .gallery div
-            for (i=0;i<counter-1;i++){
+            for (i=0;i<counter;i++){
                 // image names in both thumbnail and full image folder must be img0.png, img1.png etc
                 var filename = "/img"+ i + ".png";
                 $(".gallery").append('<a class="demo" href="'+fullFolder+filename+ ' " data-lightbox="gallery">' + 
@@ -48,7 +50,6 @@ function getNoOfImages(counter){
             }
         }
     });
-    console.log("No: of images: "+ counter);
     return counter;
 }
 
