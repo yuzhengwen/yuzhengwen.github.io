@@ -1,26 +1,3 @@
-
-
-/* loading html using jquery (prev method)
-$(function(){
-    $("#header-placeholder").load("header.html");
-});
-*/
-/*
-HTML to insert
-<button id="scroll_top">Up</button>
-
-<header>
-    <h1><a href="index.html" class="logo">yuzhengwen</a></h1>
-    <div class="header_buttons">
-        <a href="index.html" class="header_button">Home</a>
-        <a href="gallery.html" class="header_button">Art Gallery</a>
-        <a href="downloads.html" class="header_button">Downloads</a>
-        <a href="cv.html" class="header_button">CV</a>
-        <a href="legacy.html" class="header_button">Legacy</a>
-    <img src="img/menu.png" id="mobile_menu">
-    </div>
-</header>  
-*/
 addHeader();
 function addHeader(){
     var scrollButton = document.createElement("button");
@@ -45,21 +22,19 @@ function addHeader(){
     } 
     headerButtons[0].setAttribute("href", "index.html");
     headerButtons[0].textContent="Home";
-    headerButtons[1].setAttribute("href", "gallery.html");
-    headerButtons[1].textContent="Art Gallery";
-    headerButtons[2].setAttribute("href", "downloads.html");
-    headerButtons[2].textContent="Downloads";
-    headerButtons[3].setAttribute("href", "cv.html");
-    headerButtons[3].textContent="CV";
-    headerButtons[4].setAttribute("href", "legacy.html");
-    headerButtons[4].textContent="Legacy";
+    headerButtons[1].setAttribute("href", "downloads.html");
+    headerButtons[1].textContent="Downloads";
+    headerButtons[2].setAttribute("href", "cv.html");
+    headerButtons[2].textContent="CV";
+    headerButtons[3].setAttribute("href", "legacy.html");
+    headerButtons[3].textContent="Legacy";
 
     var menuButton = document.createElement("img");
     menuButton.setAttribute("id", "mobile_menu");
     menuButton.setAttribute("src", "img/menu.png");
 
     //add to respective parent elements
-    for(i=0;i<5;i++){
+    for(i=0;i<4;i++){
         headerButtonWrapper.appendChild(headerButtons[i]);
     } 
     headerLogoWrap.appendChild(headerLogo);
