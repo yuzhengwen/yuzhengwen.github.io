@@ -4,7 +4,7 @@ function addHeader(){
     scrollButton.setAttribute("id", "scroll_top");
     scrollButton.textContent = "Up"
 
-    var header = document.createElement("header");
+    var header = document.createElement("nav");
     var headerLogoWrap = document.createElement("h1");
     var headerLogo = document.createElement("a");
     headerLogo.setAttribute("href", "index.html");
@@ -12,12 +12,11 @@ function addHeader(){
     headerLogo.textContent = "yuzhengwen";
 
     var headerButtonWrapper = document.createElement("div");
-    headerButtonWrapper.setAttribute('class', 'header_buttons');
+    headerButtonWrapper.setAttribute('class', 'nav_links_wrapper ');
     //headerButtons will be an array of <a> elements
     var headerButtons = [];
-    for(i=0;i<5;i++){
+    for(i=0;i<4;i++){
         headerButtons.push(document.createElement('a'));
-        headerButtons[i].setAttribute("class", "header_button");
         headerButtonWrapper.appendChild(headerButtons[i]);
     } 
     headerButtons[0].setAttribute("href", "index.html");
@@ -53,10 +52,9 @@ function addHeader(){
 }
 
 //floating header when scroll
+const header = document.querySelector("nav");
 window.addEventListener('scroll', makeFloating);
 function makeFloating(){
-    var header = document.querySelector("header");
-    //header.classList.toggle("floating", window.scrollY>0);
     header.classList.toggle("floating", document.body.scrollTop > header.offsetHeight || document.documentElement.scrollTop > header.offsetHeight);
 }
 
@@ -71,8 +69,9 @@ function setActive(headerButtons) {
 }
 // adding listener to responsive menu button
 function setResponsive(menuButton, headerButtonWrapper){
+    const navMobile = document.querySelector(".nav-mobile-menu");
     menuButton.addEventListener('click', function(){
-        headerButtonWrapper.classList.toggle("show_menu");
+        navMobile.classList.toggle("show-menu");
         /*headerButtons.forEach((button) => {
             console.log(button.textContent);
             button.classList.toggle("show_menu");

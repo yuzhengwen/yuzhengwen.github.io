@@ -1,22 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;600&display=swap');
+@import 'header.css';
 
 * {
     box-sizing: border-box;
     --defColor: #ddd;
-    --hoverColor: rgb(97, 79, 145);
-    --primaryColor: rgb(38, 34, 54);
-    --menuColor: rgb(26, 26, 39);
+    --hoverColor: #AC7B84;
+    --primaryColor: #cacacf;
+    --menuColor: #414162;
 }
 
-body{
+body {
     background-color: var(--primaryColor);
-    font-family:'Dosis', sans-serif;
+    font-family: 'Dosis', sans-serif;
     margin: 0;
     overflow-x: hidden;
 }
 
-#scroll_top {   
-    all: reset; 
+#scroll_top {
+    all: reset;
     position: fixed;
     bottom: 5%;
     left: 2%;
@@ -29,164 +30,75 @@ body{
     display: none;
     animation: fade_out 0.5s
 }
+
 /* select elements with scrolltop id and class show*/
-#scroll_top.show{
+#scroll_top.show {
     display: block;
     animation: fade_in 0.5s
 }
-@keyframes fade_in {
-     0% {
-          opacity: 0;
-          transform: scale(0)
-     }
 
-     100% {
-          opacity: 1;
-          transform: scale(1)
-     }
-}
-/* to debug later*/
-@keyframes fade_out {
+@keyframes fade_in {
     0% {
-         opacity: 1;
-         transform: scale(1)
+        opacity: 0;
+        transform: scale(0)
     }
 
     100% {
-         opacity: 0;
-         transform: scale(0)
+        opacity: 1;
+        transform: scale(1)
     }
 }
 
-/* header stuff
-position sticky gets weird if there is a parent element */
-#header-placeholder{
-    position: sticky;
-    top: 0;
-    z-index: 100;
+/* to debug later*/
+@keyframes fade_out {
+    0% {
+        opacity: 1;
+        transform: scale(1)
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0)
+    }
 }
-header{
-    left: 0;
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+        scale: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        scale: 1;
+    }
+}
+
+.card {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    height: fit-content;
+}
+
+.box {
+    background-color: var(--defColor);
+    height: 100vh;
+    margin: 0 auto;
+    padding: 10vw;
+
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 5%;
-    width: 100%;
-    background-color: var(--menuColor);
-    text-transform: uppercase;
-    transition: 1s;
-}
-/*affects all links in header*/
-header a {
-    padding: 5%;
-    font-weight: 700;
-    text-decoration: none;
-    white-space: nowrap;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    color: var(--defColor);
-
-    padding-top: 8%;
-    padding-bottom: 8%;
-    transition: 0.3s;
-}
-header h1{
-    margin: 0;
-    margin-left:10%;
-    text-decoration: none;
-    color: var(--defColor);
-    font-size: 2em;
-}
-header .logo:hover{
-    transition: 0.3s;
-    color: var(--hoverColor);
-}
-
-.header_buttons{
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    margin-right: 10%;
-    height: 100%;
-    font-size: 1.5em;
-}
-.header_button:hover{
-    color: var(--hoverColor);
-    background-color: rgb(180, 183, 189, 0.2);
-    transition: 0.3s;
-}
-
-.active{
-    color: var(--hoverColor);
-}
-
-.floating{
-    background-color: rgb(0, 0, 1, 0.2);
-    transition: 0.3s;
-}
-.floating a{
-    padding: 3%; 
-    font-size: smaller;
-    transition: 0.3s;
-    width: 100%;
-}
-/* End header stuff*/
-
-/* Start Boxes stuff*/
-.box_wrapper{
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    border: 1px solid var(--menuColor);
 }
 
-.box{
-    background-color: var(--clr);
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80%;
-    height: 400px;
-    margin: 1%;
-    border-radius: 20px;
-
-    transform: translateX(200%);
-    transition: transform 0.4s ease;
+.box .card {
+    margin: 2%;
 }
-
-.box:nth-of-type(even){
-    transform: translateX(-200%);
-    transition: transform 0.4s ease;
-}
-
-
-.box.show{
-    transform: translateX(0);
-    transition: transform 0.4s ease;
-}
-
-.box1{
-    --clr: rgba(255, 255, 255, 0.3);
-}
-.box2{
-    --clr: rgba(67, 45, 119, 0.5);
-}
-
-.box3{
-    --clr: rgba(87, 50, 112, 0.5);
-}
-
-.box4{
-    --clr: rgba(110, 42, 75, 0.5);
-}
-
-.box5{
-    --clr: rgba(99, 28, 39, 0.5);
-}
-/*End boxes stuff*/
 
 #cv {
     width: 90%;
@@ -196,81 +108,3 @@ header .logo:hover{
 
 /* responsive design*/
 
-#mobile_menu{
-    display: none;
-    width: 10%;
-    height: 100%;
-    margin-right: 5%;
-}
-#mobile_menu:hover{
-    background-color: var(--hoverColor);
-    cursor: pointer;
-    transition: 0.3s;
-}
-@media screen and (max-width: 900px) {
-    #mobile_menu {
-        display: block;
-    }
-    header{
-        height: 10vh;
-    }
-    header h1 {
-        /*font-size: 4.5vw; */
-        font-size: 6vh;
-    }
-    .header_buttons{
-        display: none;
-        position: fixed;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        background-color: var(--menuColor);
-        animation: hide_menu 0.5s;
-        margin: 0;
-        right: 0 ;
-        top: 10vh;
-        font-size: 4vh;
-        height: 60vh;
-        width: 50vh;
-    }
-        
-    header .header_buttons a.header_button{
-        width: 100%;
-        padding-right: 30%;
-        padding-left: 30%;
-        padding-top: 2%;
-        padding-bottom: 2%;
-    }
-    .show_menu{
-        display: flex;
-        animation: show_menu 0.5s;
-    }
-    /* Remove sliding in animation of boxes for mobile*/
-    .box, .box:nth-of-type(even){
-        transform: translateX(0);
-    }
-    #scroll_top{
-        padding: 4%;
-    }
-    .floating a{
-        font-size: 100%;
-    }
-}
-
-/* Animation for menu sliding in for mobile*/
-@keyframes show_menu{
-    0% {
-        translate: 100%;
-    }
-    100% {
-        translate: 0;
-    }
-}
-@keyframes hide_menu{
-    0% {
-        translate: 0;
-    }
-    100% {
-        translate: -100%;
-    }
-}
