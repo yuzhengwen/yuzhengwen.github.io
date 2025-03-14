@@ -134,6 +134,7 @@ body {
     background-color: #202027;
     padding: 0 10%;
     text-align: center;
+    color: var(--defColor);
 
     display: grid;
     place-content: center;
@@ -148,6 +149,8 @@ body {
     border-radius: 50%;
 }
 
-.landing .landing-left {
-    max-width: 70% !important;
+.landing-content{
+    max-width: 90% !important;
+    justify-self: center;
+    justify-content: space-around;
 }
