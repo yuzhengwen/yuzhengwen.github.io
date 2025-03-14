@@ -41,6 +41,8 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    font-family: "dosis";
+    font-weight: bold;
 }
 
 #socials-links .social-link {
@@ -69,7 +71,6 @@
 .footer-content #socials-links a .text {
     transform: translateX(35px);
     color: #eee;
-    font-weight: bold;
 }
 
 .footer-content #socials-links a .icon {
