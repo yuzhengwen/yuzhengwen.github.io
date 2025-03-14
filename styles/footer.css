@@ -1,0 +1,128 @@
+
+/* Footer */
+.footer-content {
+    background-color: var(--menuColor);
+    color: var(--defColor);
+    padding: 2%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content #profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+}
+
+.footer-content #profile #profile-right {
+    width: 50%;
+}
+
+.footer-content #profile div {
+    margin: 5%;
+}
+
+.footer-content #profile img {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+
+.footer-content #socials-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#socials-links .social-link {
+    margin: 1% 3%;
+}
+
+/* From Uiverse.io by cssbuttons-io */
+.footer-content #socials-links a {
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: var(--hoverColor);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+}
+
+.footer-content #socials-links a,
+.footer-content #socials-links a span {
+    transition: 200ms;
+}
+
+.footer-content #socials-links a .text {
+    transform: translateX(35px);
+    color: white;
+    font-weight: bold;
+}
+
+.footer-content #socials-links a .icon {
+    position: absolute;
+    border-left: 1px solid var(--hoverColorDark);
+    transform: translateX(110px);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-content #socials-links a svg {
+    width: 15px;
+    fill: #eee;
+}
+
+.footer-content #socials-links a:hover {
+    background: var(--hoverColorDark);
+}
+
+.footer-content #socials-links a:hover .text {
+    color: transparent;
+}
+
+.footer-content #socials-links a:hover .icon {
+    width: 150px;
+    border-left: none;
+    transform: translateX(0);
+}
+
+.footer-content #socials-links a:focus {
+    outline: none;
+}
+
+.footer-content #socials-links a:active .icon svg {
+    transform: scale(0.8);
+}
+
+@media screen and (max-width: 900px) {
+    .footer-content #profile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 75%;
+    }
+    .footer-content #socials-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #socials-links .social-link {
+        margin: 3%;
+        scale: 0.8;
+    }
+}

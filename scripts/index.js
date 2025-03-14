@@ -1,8 +1,11 @@
 addHeader();
-function addHeader(){
+function addHeader() {
     var scrollButton = document.createElement("button");
     scrollButton.setAttribute("id", "scroll_top");
     scrollButton.textContent = "Up"
+
+    const navMainWrapper = document.createElement("div");
+    navMainWrapper.setAttribute("class", "nav_main_wrapper");
 
     var header = document.createElement("nav");
     var headerLogoWrap = document.createElement("h1");
@@ -14,32 +17,38 @@ function addHeader(){
     var headerButtonWrapper = document.createElement("div");
     headerButtonWrapper.setAttribute('class', 'nav_links_wrapper ');
     //headerButtons will be an array of <a> elements
-    var headerButtons = [];
-    for(i=0;i<4;i++){
+    const headerButtons = [];
+    const navTexts = ["Home", "Profile", "CV"];
+    const navLinks = ["index.html", "index.html#profile", "cv.html"];
+    for (i = 0; i < navLinks.length; i++) {
         headerButtons.push(document.createElement('a'));
+        headerButtons[i].textContent = navTexts[i];
+        headerButtons[i].setAttribute("href", navLinks[i]);
         headerButtonWrapper.appendChild(headerButtons[i]);
-    } 
-    headerButtons[0].setAttribute("href", "index.html");
-    headerButtons[0].textContent="Home";
-    headerButtons[1].setAttribute("href", "downloads.html");
-    headerButtons[1].textContent="Downloads";
-    headerButtons[2].setAttribute("href", "cv.html");
-    headerButtons[2].textContent="CV";
-    headerButtons[3].setAttribute("href", "legacy.html");
-    headerButtons[3].textContent="Legacy";
+    }
 
     var menuButton = document.createElement("img");
     menuButton.setAttribute("id", "mobile_menu");
     menuButton.setAttribute("src", "img/menu.png");
 
+    const mobileMenu = document.createElement("div");
+    mobileMenu.setAttribute("class", "nav-mobile-menu");
+    for (i = 0; i < navLinks.length; i++) {
+        mobileMenu.appendChild(document.createElement('a'));
+        mobileMenu.children[i].textContent = navTexts[i];
+        mobileMenu.children[i].setAttribute("href", navLinks[i]);
+    }
+
     //add to respective parent elements
-    for(i=0;i<4;i++){
+    for (i = 0; i < headerButtons.length; i++) {
         headerButtonWrapper.appendChild(headerButtons[i]);
-    } 
+    }
     headerLogoWrap.appendChild(headerLogo);
-    header.appendChild(headerLogoWrap);
-    header.appendChild(headerButtonWrapper);
-    header.appendChild(menuButton);
+    navMainWrapper.appendChild(headerLogoWrap);
+    navMainWrapper.appendChild(headerButtonWrapper);
+    navMainWrapper.appendChild(menuButton);
+    header.appendChild(navMainWrapper);
+    header.appendChild(mobileMenu);
 
     // add to html doc
     var wrap = document.getElementById("header-placeholder");
@@ -54,7 +63,7 @@ function addHeader(){
 //floating header when scroll
 const header = document.querySelector("nav");
 window.addEventListener('scroll', makeFloating);
-function makeFloating(){
+function makeFloating() {
     header.classList.toggle("floating", document.body.scrollTop > header.offsetHeight || document.documentElement.scrollTop > header.offsetHeight);
 }
 
@@ -68,9 +77,9 @@ function setActive(headerButtons) {
     });
 }
 // adding listener to responsive menu button
-function setResponsive(menuButton, headerButtonWrapper){
+function setResponsive(menuButton, headerButtonWrapper) {
     const navMobile = document.querySelector(".nav-mobile-menu");
-    menuButton.addEventListener('click', function(){
+    menuButton.addEventListener('click', function () {
         navMobile.classList.toggle("show-menu");
         /*headerButtons.forEach((button) => {
             console.log(button.textContent);
@@ -89,7 +98,7 @@ function checkBoxes() {
     boxes.forEach(box => {
         const boxTop = box.getBoundingClientRect().top;
 
-        if (boxTop < triggerBottom){
+        if (boxTop < triggerBottom) {
             box.classList.add("show");
         } else {
             box.classList.remove("show");
@@ -100,9 +109,9 @@ function checkBoxes() {
 //scroll button
 window.addEventListener('scroll', displayScrollTop);
 
-function displayScrollTop(){
+function displayScrollTop() {
     const scrollTopButton = document.getElementById("scroll_top");
-    scrollTopButton.classList.toggle("show", window.scrollY>0);
+    scrollTopButton.classList.toggle("show", window.scrollY > 0);
     //good practice to add listener instead of using html onclick=""
     scrollTopButton.addEventListener("click", scrollTop, false);
 }
