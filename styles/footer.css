@@ -1,4 +1,3 @@
-
 /* Footer */
 .footer-content {
     background-color: var(--menuColor);
@@ -97,6 +96,7 @@
     width: 150px;
     border-left: none;
     transform: translateX(0);
+    scale: 1.5;
 }
 
 .footer-content #socials-links a:focus {
@@ -107,20 +107,28 @@
     transform: scale(0.8);
 }
 
+/* end of Uiverse.io by cssbuttons-io */
+
 @media screen and (max-width: 900px) {
     .footer-content #profile {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 75%;
+        width: 90%;
     }
+
     .footer-content #socials-links {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
+
+    .footer-content #profile #profile-right {
+        width: 100%;
+    }
+
     #socials-links .social-link {
         margin: 3%;
         scale: 0.8;
