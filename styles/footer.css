@@ -18,12 +18,10 @@
     width: 75%;
 }
 
-.footer-content p {
-    text-align: left;
-}
 
 .footer-content #profile #profile-right {
     width: 50%;
+    text-align: left;
 }
 
 .footer-content #profile div {
@@ -34,6 +32,7 @@
     border-radius: 50%;
     height: 150px;
     width: 150px;
+    object-fit: cover;
 }
 
 .footer-content #socials-links {
