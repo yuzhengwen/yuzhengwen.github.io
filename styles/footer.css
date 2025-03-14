@@ -18,6 +18,10 @@
     width: 75%;
 }
 
+.footer-content p {
+    text-align: left;
+}
+
 .footer-content #profile #profile-right {
     width: 50%;
 }

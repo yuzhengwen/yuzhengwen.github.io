@@ -21,23 +21,35 @@ body {
 }
 
 #scroll_top {
-    all: reset;
     position: fixed;
     bottom: 5%;
     left: 2%;
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.253);
-    padding: 1%;
+    background-color: rgba(255, 255, 255, 0.575);
     border-radius: 50%;
     border: none;
+    width: 3rem;
+    height: 3rem;
 
     display: none;
-    animation: fade_out 0.5s
+    animation: fade_out 0.5s;
+    transition: all 0.3s;
 }
 
 #scroll_top.show {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     animation: fade_in 0.5s
+}
+
+#scroll_top:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: all 0.3s;
+}
+#scroll_top:active {
+    scale: 0.7;
+    transition: all 0.3s;
 }
 
 @keyframes fade_in {
@@ -52,7 +64,6 @@ body {
     }
 }
 
-/* to debug later*/
 @keyframes fade_out {
     0% {
         opacity: 1;
@@ -63,6 +74,26 @@ body {
         opacity: 0;
         transform: scale(0)
     }
+}
+
+/* Card */
+
+.card {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    height: fit-content;
+    box-shadow: 6px 8px 14px 2px rgba(0, 0, 0, 0.3);
+}
+
+.card-link {
+    text-decoration: none;
+}
+
+.card:hover {
+    animation: shake 0.6s cubic-bezier(.36, .07, .19, .97) both;
+    transform: translate3d(0, 0, 0);
+    perspective: 1000px;
 }
 
 @keyframes appear {
@@ -79,23 +110,41 @@ body {
     }
 }
 
-.card {
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
-    height: fit-content;
-    box-shadow: 5px 8px 14px 2px rgba(0, 0, 0, 0.3);
+@keyframes shake {
+
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-2px, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(2px, 0, 0);
+    }
 }
+
+/*card end*/
 
 #cv {
     width: 90%;
     height: 100vh;
     padding-top: 8vh;
+    justify-self: center;
 }
 
 .main-content {
     padding: 0 10%;
-    max-width: 75%;
     margin: 8% auto;
 }
 
@@ -103,6 +152,7 @@ body {
     margin-bottom: 5%;
 }
 
+/* Carousel */
 #carouselExampleCaptions {
     max-height: 90vh;
     height: 90vh;
@@ -159,3 +209,5 @@ body {
     color: var(--text-accent);
     margin-bottom: 1.5rem;
 }
+
+/* Carousel end */

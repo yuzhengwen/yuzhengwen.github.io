@@ -1,8 +1,5 @@
 addHeader();
 function addHeader() {
-    var scrollButton = document.createElement("button");
-    scrollButton.setAttribute("id", "scroll_top");
-    scrollButton.textContent = "Up"
 
     const navMainWrapper = document.createElement("div");
     navMainWrapper.setAttribute("class", "nav_main_wrapper");
@@ -53,11 +50,18 @@ function addHeader() {
     // add to html doc
     var wrap = document.getElementById("header-placeholder");
     wrap.appendChild(header);
-    wrap.appendChild(scrollButton);
 
-    setActive(headerButtons);
     setResponsive(menuButton, headerButtonWrapper);
-    var width = window.innerWidth;
+
+    // on page load, set active nav button
+    setActive(headerButtons);
+    // on click, set active nav button (for no page reload)
+    /*
+    headerButtons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+            setActiveNav(headerButtons, index);
+        });
+    });*/
 }
 
 //floating header when scroll
@@ -66,7 +70,12 @@ window.addEventListener('scroll', makeFloating);
 function makeFloating() {
     header.classList.toggle("floating", document.body.scrollTop > header.offsetHeight || document.documentElement.scrollTop > header.offsetHeight);
 }
-
+function setActiveNav(navButtons, activeIndex) {
+    navButtons.forEach((button) => {
+        button.classList.remove("active");
+    });
+    navButtons[activeIndex].classList.add("active");
+}
 //setting current page to active on header
 function setActive(headerButtons) {
     headerButtons.forEach((button) => {
