@@ -7,7 +7,9 @@
     --text-accent: #AC7B84;
     --text-accent-dark: #924c60;
     --main-bg-color: #e3e3e6;
-    --menuColor: #414162;
+    --menuColor: #212142
+        /* #2f2f4e*/
+    ;
     --bg-black: #000000;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
 }
@@ -19,8 +21,7 @@ body {
     color: var(--text-default);
 }
 
-p {
-}
+p {}
 
 #scroll_top {
     position: fixed;
@@ -89,14 +90,14 @@ p {
     box-shadow: 6px 8px 14px 2px rgba(0, 0, 0, 0.3);
 }
 
-.card-link {
-    text-decoration: none;
-}
-
 .card:hover {
     animation: shake 0.6s cubic-bezier(.36, .07, .19, .97) both;
     transform: translate3d(0, 0, 0);
     perspective: 1000px;
+}
+
+.card a {
+    text-decoration: none;
 }
 
 @keyframes appear {
@@ -184,7 +185,15 @@ p {
     position: absolute;
     display: block !important;
     bottom: 0;
-    background-color: #202027;
+    /*background-color: #202027;*/
+
+    background: #2b5876;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4e4376, #1b2658);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #382d5f, #1b2658);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     padding: 0 10%;
     text-align: center;
     color: var(--text-default);
@@ -199,7 +208,7 @@ p {
     height: 100%;
     object-fit: cover;
     display: block;
-    border-radius: 50%;
+    border-radius: 20%;
 }
 
 .landing-content {
