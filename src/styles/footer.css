@@ -1,5 +1,5 @@
-/* Footer */
-.footer-content {
+/* Profile */
+.profile-content {
     background-color: var(--menuColor);
     color: var(--text-default);
     padding: 2%;
@@ -10,7 +10,7 @@
     align-items: center;
 }
 
-.footer-content #profile {
+.profile-content #profile {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -19,23 +19,23 @@
 }
 
 
-.footer-content #profile #profile-right {
+.profile-content #profile #profile-right {
     width: 50%;
     text-align: left;
 }
 
-.footer-content #profile div {
+.profile-content #profile div {
     margin: 5%;
 }
 
-.footer-content #profile img {
+.profile-content #profile img {
     border-radius: 50%;
     height: 150px;
     width: 150px;
     object-fit: cover;
 }
 
-.footer-content #socials-links {
+.profile-content #socials-links {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -49,7 +49,7 @@
 }
 
 /* From Uiverse.io by cssbuttons-io */
-.footer-content #socials-links a {
+.profile-content #socials-links a {
     width: 150px;
     height: 50px;
     cursor: pointer;
@@ -62,17 +62,17 @@
     text-decoration: none;
 }
 
-.footer-content #socials-links a,
-.footer-content #socials-links a span {
+.profile-content #socials-links a,
+.profile-content #socials-links a span {
     transition: 200ms;
 }
 
-.footer-content #socials-links a .text {
+.profile-content #socials-links a .text {
     transform: translateX(35px);
     color: #eee;
 }
 
-.footer-content #socials-links a .icon {
+.profile-content #socials-links a .icon {
     position: absolute;
     border-left: 1px solid var(--secondary-dark);
     transform: translateX(110px);
@@ -83,38 +83,38 @@
     justify-content: center;
 }
 
-.footer-content #socials-links a svg {
+.profile-content #socials-links a svg {
     width: 15px;
     fill: #eee;
 }
 
-.footer-content #socials-links a:hover {
+.profile-content #socials-links a:hover {
     background: var(--secondary-dark);
 }
 
-.footer-content #socials-links a:hover .text {
+.profile-content #socials-links a:hover .text {
     color: transparent;
 }
 
-.footer-content #socials-links a:hover .icon {
+.profile-content #socials-links a:hover .icon {
     width: 150px;
     border-left: none;
     transform: translateX(0);
     scale: 1.5;
 }
 
-.footer-content #socials-links a:focus {
+.profile-content #socials-links a:focus {
     outline: none;
 }
 
-.footer-content #socials-links a:active .icon svg {
+.profile-content #socials-links a:active .icon svg {
     transform: scale(0.8);
 }
 
 /* end of Uiverse.io by cssbuttons-io */
 
 @media screen and (max-width: 900px) {
-    .footer-content #profile {
+    .profile-content #profile {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -122,14 +122,14 @@
         width: 90%;
     }
 
-    .footer-content #socials-links {
+    .profile-content #socials-links {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    .footer-content #profile #profile-right {
+    .profile-content #profile #profile-right {
         width: 100%;
     }
 

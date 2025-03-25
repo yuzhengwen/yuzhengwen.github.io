@@ -6,8 +6,8 @@
   box-sizing: border-box;
   --text-default: #ddd;
   --text-default-dark: 212529;
-  --secondary: #ac7b84;
-  --secondary-dark: #924c60;
+  --secondary: #ac5a73;
+  --secondary-dark: #7e2d44;
   --main-bg-color: #e3e3e6;
   --menuColor: #212142 /* #2f2f4e*/;
   --bg-black: #000000;
@@ -19,10 +19,6 @@ body {
   margin: 0;
   overflow-x: hidden;
 }
-
-p {
-}
-
 #scroll_top {
   position: fixed;
   bottom: 5%;
@@ -182,7 +178,7 @@ p {
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   padding: 0 10%;
-  text-align: center;
+  text-align: left;
   color: var(--text-default);
 
   display: grid;
@@ -205,8 +201,25 @@ p {
 }
 
 .landing-content h1 {
-  color: var(--secondary);
+  /*color: var(--secondary);*/
   margin-bottom: 1.5rem;
+  background-image: linear-gradient(90deg, #a01e5b, #6233cf, #3680b1, #a01e5b);
+  color: transparent;
+  background-clip: text;
+  background-size: 200%;
+  animation: gradient-shift 3s infinite linear;
+  --webkit-background-clip: text;
+}
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* Carousel end */
@@ -216,18 +229,24 @@ p {
   flex-wrap: wrap;
 }
 .skill-pill {
-  background-color: var(--secondary-dark);
-  color: var(--text-default);
+  color: var(--text-default-dark);
   padding: 0.2rem 0.5rem;
   border-radius: 1.5rem;
   margin: 0.1rem 0.2rem;
+  background-color: var(--main-bg-color);
 }
 .skill-pill:hover {
-  background-color: var(--main-bg-color);
-  color: var(--secondary-dark);
+  color: var(--text-default);
+  background-color: var(--secondary);
 }
 @media screen and (max-width: 768px) {
   .skills-wrapper {
     font-size: smaller;
   }
+}
+
+footer {
+  background-color: var(--main-bg-color);
+  padding: 1rem;
+  text-align: center;
 }

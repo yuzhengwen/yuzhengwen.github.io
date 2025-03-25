@@ -23,7 +23,15 @@ import { baseUrl } from "../resolveBaseUrl";
       <div class="landing">
         <div class="container-fluid text-align-center">
           <div class="landing-content row align-items-center">
-            <div class="col-md-5 landing-left"><IntroText /></div>
+            <div class="col-md-5 landing-left">
+              <IntroText />
+              <a href="#my-projects" class="btn-grad btn btn-primary"
+                >Projects</a
+              >
+              <a href="#profile" class="btn btn-primary btn-grad"
+                >Learn About Me</a
+              >
+            </div>
             <div class="col-md-5 landing-right">
               <img src=`${baseUrl}/images/Me.png` alt="Picture of Me" />
             </div>
@@ -65,3 +73,27 @@ import { baseUrl } from "../resolveBaseUrl";
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+<style>
+  .btn-grad {
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    background-image: linear-gradient(
+      to right,
+      #7d1ab6 0%,
+      #b1164f 51%,
+      #7d1ab6 100%
+    );
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    transition: 0.3s;
+    background-size: 200% auto;
+    border-radius: 10px;
+  }
+
+  .btn-grad:hover {
+    transition: 0.3s;
+    scale: 1.1;
+    background-position: right center; /* change the direction of the change here */
+  }
+</style>

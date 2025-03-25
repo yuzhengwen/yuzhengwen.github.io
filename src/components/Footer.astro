@@ -1,0 +1,23 @@
+---
+import { Content as FooterText } from "../content/footer.md";
+import { baseUrl } from "../resolveBaseUrl";
+---
+
+<footer>
+  <hr /><small>
+    <FooterText />
+  </small>
+  <p>© {new Date().getFullYear()} Yu Zhengwen</p>
+</footer>
+<style>
+  footer {
+    background-color: var(--menuColor);
+    padding: 1rem;
+    text-align: center;
+    color: var(--text-default);
+    font-size: smaller;
+  }
+  p {
+    margin: 0;
+  }
+</style>
