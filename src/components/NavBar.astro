@@ -1,0 +1,64 @@
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    setResponsive();
+    setActiveNavOnLoad();
+    setupScrollEffects();
+  });
+
+  function setActiveNavOnLoad() {
+    const headerButtons = document.querySelectorAll<HTMLAnchorElement>(
+      ".nav_links_wrapper a"
+    );
+    headerButtons.forEach((button) => {
+      if (button.href === window.location.href) {
+        button.classList.add("active");
+        button.setAttribute("aria-current", "page");
+      }
+    });
+  }
+
+  function setResponsive() {
+    const menuButton = document.getElementById("mobile_menu");
+    const navMobile = document.querySelector(".nav-mobile-menu");
+
+    menuButton?.addEventListener("click", function () {
+      navMobile?.classList.toggle("show-menu");
+    });
+  }
+
+  function setupScrollEffects() {
+    const nav = document.querySelector("nav") as HTMLElement | null;
+    const scrollTopButton = document.getElementById(
+      "scroll_top"
+    ) as HTMLElement | null;
+
+    window.addEventListener("scroll", () => {
+      if (nav) nav.classList.toggle("floating", window.scrollY > 50);
+      if (scrollTopButton)
+        scrollTopButton.classList.toggle("show", window.scrollY > 0);
+    });
+
+    if (scrollTopButton) {
+      scrollTopButton.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    }
+  }
+</script>
+
+<nav>
+  <div class="nav_main_wrapper">
+    <h1><a href="/" class="logo">yuzhengwen</a></h1>
+    <div class="nav_links_wrapper">
+      <a href="/">Home</a>
+      <a href="#profile">Profile</a>
+      <a href="cv.html">CV</a>
+    </div>
+    <img id="mobile_menu" src="/portfolio-site-src/icons/menu.png" alt="Menu" />
+  </div>
+  <div class="nav-mobile-menu">
+    <a href="/">Home</a>
+    <a href="#profile">Profile</a>
+    <a href="cv.html">CV</a>
+  </div>
+</nav>

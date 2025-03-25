@@ -1,0 +1,51 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { render } from "astro:content";
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+export const getStaticPaths = async () => {
+  const projects = await getCollection("projects");
+  const paths = projects.map((project) => {
+    return {
+      params: {
+        slug: project.data.title,
+      },
+      props: {
+        project,
+      },
+    };
+  });
+  return paths;
+};
+console.log(Astro.params.slug);
+type Props = {
+  project: CollectionEntry<"projects">;
+};
+const { project } = Astro.props;
+const { Content } = await render(project);
+---
+
+<Layout>
+  <a href="/">Back to home</a>
+  <div class="main-content">
+    <h1>{project.data.title}</h1>
+    <Content />
+  </div>
+</Layout>
+
+<style>
+  .main-content {
+    width: 75%;
+    margin: 8% auto;
+  }
+  h1 {
+    text-align: center;
+  }
+  @media screen and (max-width: 768px) {
+    .main-content {
+      width: 100%;
+      margin: 0 auto;
+    }
+    
+  }
+</style>

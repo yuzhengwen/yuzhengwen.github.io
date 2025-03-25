@@ -1,0 +1,54 @@
+---
+import { Image, Picture } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
+
+type Props = {
+  project: CollectionEntry<"projects">;
+};
+const { project } = Astro.props;
+const { title, skills, source, link, description, coverImg } = project.data;
+---
+
+<div class="col">
+  <div class="card h-100">
+    <Picture
+      src={coverImg}
+      class="card-img-top"
+      alt="Yu Parkin"
+      width={800}
+      height={450}
+    />
+    <div class="card-body">
+      <h5 class="card-title">{title}</h5>
+      <p class="card-text">{description}</p>
+      <div class="card-text-bottom">
+        <a
+          role="button"
+          class="btn btn-outline-primary"
+          href=`/projects/${title}`>Learn More</a
+        >
+        <div class="card-links">
+          <a href={link}>Link</a>
+          <a href={source}>Source</a>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <div class="skills-wrapper">
+        {
+          skills.map((skill) => (
+            <span class="skill-pill">
+              <small>{skill}</small>
+            </span>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  img {
+    width: 100%;
+    height: 100%;
+  }
+</style>
