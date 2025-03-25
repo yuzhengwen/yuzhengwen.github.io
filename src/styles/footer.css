@@ -55,7 +55,7 @@
     cursor: pointer;
     display: flex;
     align-items: center;
-    background: var(--text-accent);
+    background: var(--secondary);
     border: none;
     border-radius: 5px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
@@ -74,7 +74,7 @@
 
 .footer-content #socials-links a .icon {
     position: absolute;
-    border-left: 1px solid var(--text-accent-dark);
+    border-left: 1px solid var(--secondary-dark);
     transform: translateX(110px);
     height: 40px;
     width: 40px;
@@ -89,7 +89,7 @@
 }
 
 .footer-content #socials-links a:hover {
-    background: var(--text-accent-dark);
+    background: var(--secondary-dark);
 }
 
 .footer-content #socials-links a:hover .text {

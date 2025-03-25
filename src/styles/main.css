@@ -1,11 +1,13 @@
 @import "header.css";
 @import "footer.css";
+@import "bootstrap-icons/font/bootstrap-icons.css";
 
 * {
   box-sizing: border-box;
   --text-default: #ddd;
-  --text-accent: #ac7b84;
-  --text-accent-dark: #924c60;
+  --text-default-dark: 212529;
+  --secondary: #ac7b84;
+  --secondary-dark: #924c60;
   --main-bg-color: #e3e3e6;
   --menuColor: #212142 /* #2f2f4e*/;
   --bg-black: #000000;
@@ -16,7 +18,6 @@ body {
   background-color: var(--main-bg-color) !important;
   margin: 0;
   overflow-x: hidden;
-  color: var(--text-default);
 }
 
 p {
@@ -135,7 +136,7 @@ p {
 
 .main-content {
   padding: 0 10%;
-  margin: 5% auto;
+  margin: 8vh auto; /* 8vh is the height of the header */
 }
 
 .main-content section {
@@ -204,7 +205,7 @@ p {
 }
 
 .landing-content h1 {
-  color: var(--text-accent);
+  color: var(--secondary);
   margin-bottom: 1.5rem;
 }
 
@@ -215,15 +216,15 @@ p {
   flex-wrap: wrap;
 }
 .skill-pill {
-  background-color: var(--text-accent-dark);
+  background-color: var(--secondary-dark);
   color: var(--text-default);
   padding: 0.2rem 0.5rem;
   border-radius: 1.5rem;
   margin: 0.1rem 0.2rem;
 }
 .skill-pill:hover {
-  background-color: var(--text-accent);
-  color: var(--text-accent-dark);
+  background-color: var(--main-bg-color);
+  color: var(--secondary-dark);
 }
 @media screen and (max-width: 768px) {
   .skills-wrapper {

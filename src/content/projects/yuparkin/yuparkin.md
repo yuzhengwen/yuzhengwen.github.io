@@ -1,6 +1,6 @@
 ---
-title: "mypost"
-description: "My description"
+title: "YuParkin"
+description: "When your family with multiple drivers share a car, it can be annoying to figure out where it was last parked (and by who). Do you use WhatsApp/Telegram to update the location? Try YuParkin!"
 type: "game"
 link: "https://yuparkin.pages.dev/"
 source: "https://github.com/yuzhengwen/YuParkin"
@@ -9,10 +9,8 @@ skills:
   [Vue, Pinia, PrimeVue, TailwindCSS, Appwrite, Cloudflare Pages, Geolocation]
 ---
 
-### Hi
+### Development
 
-This is a **markdown** file.
+Tech stack choice
 
-## Header 2
-
-This is more content
+### Process
