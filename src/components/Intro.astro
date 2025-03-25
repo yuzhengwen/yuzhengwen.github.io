@@ -1,5 +1,6 @@
 ---
 import { Content as IntroText } from "../content/intro.md";
+import { baseUrl } from "../resolveBaseUrl";
 ---
 
 <div id="carouselExampleCaptions" class="carousel slide">
@@ -24,7 +25,7 @@ import { Content as IntroText } from "../content/intro.md";
           <div class="landing-content row align-items-center">
             <div class="col-md-5 landing-left"><IntroText /></div>
             <div class="col-md-5 landing-right">
-              <img src="/portfolio-site-src/images/Me.png" alt="Picture of Me" />
+              <img src=`${baseUrl}/images/Me.png` alt="Picture of Me" />
             </div>
           </div>
           <div class="carousel-caption d-none d-md-block">
@@ -35,7 +36,7 @@ import { Content as IntroText } from "../content/intro.md";
     </div>
     <div class="carousel-item">
       <img
-        src="/portfolio-site-src/images/Dian.png"
+        src=`${baseUrl}/images/Dian.png`
         class="d-block w-100 full-image"
         alt="..."
       />

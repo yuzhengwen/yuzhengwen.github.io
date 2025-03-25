@@ -1,5 +1,6 @@
 ---
 import { Content as ProfileText } from "../content/profile.md";
+import { baseUrl } from "../resolveBaseUrl";
 ---
 
 <section id="footer">
@@ -9,7 +10,7 @@ import { Content as ProfileText } from "../content/profile.md";
         <div id="profile-left">
           <h3>Yu Zhengwen</h3>
           <p>Software Engineer</p>
-          <img src="/portfolio-site-src/images/Me3.jpg" alt="Profile Picture" />
+          <img src=`${baseUrl}/images/Me3.jpg` alt="Profile Picture" />
         </div>
         <div id="profile-right">
           <p><ProfileText /></p>

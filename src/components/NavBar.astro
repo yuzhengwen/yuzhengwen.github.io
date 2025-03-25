@@ -1,3 +1,7 @@
+---
+import { baseUrl } from "../resolveBaseUrl";
+---
+
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     setResponsive();
@@ -54,7 +58,7 @@
       <a href="#profile">Profile</a>
       <a href="cv.html">CV</a>
     </div>
-    <img id="mobile_menu" src="/portfolio-site-src/icons/menu.png" alt="Menu" />
+    <img id="mobile_menu" src=`${baseUrl}/icons/menu.png` alt="Menu" />
   </div>
   <div class="nav-mobile-menu">
     <a href="/">Home</a>
