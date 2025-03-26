@@ -128,7 +128,9 @@ body {
 }
 
 /*card end*/
-
+.main-container {
+  margin-top: 8vh; /*height of the header */
+}
 #cv {
   width: 90%;
   height: 100vh;
@@ -136,16 +138,13 @@ body {
 }
 
 .main-content {
-  padding: 8vh 10% 3rem; /*height of the header */
+  padding: 3rem 10%;
   margin: 0 auto 0;
   background-color: var(--main-bg-color);
 }
 
 .main-content section {
   padding-bottom: 5%;
-}
-#landing-front {
-  margin-top: 8vh; /*height of the header */
 }
 
 /* Carousel */

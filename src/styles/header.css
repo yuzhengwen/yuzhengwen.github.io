@@ -180,7 +180,10 @@ nav .logo:hover {
   .nav_main_wrapper {
     height: 4rem !important;
   }
-  #landing-front {
+  .nav_main_wrapper h1 {
+    font-size: 1.5rem;
+  }
+  .main-container {
     margin-top: 4rem !important;
   }
 }
