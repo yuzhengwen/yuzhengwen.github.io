@@ -130,14 +130,13 @@ body {
 /*card end*/
 
 #cv {
-  margin: 8vh auto 0; /*height of the header */
   width: 90%;
   height: 100vh;
   justify-self: center;
 }
 
 .main-content {
-  padding: 3rem 10%;
+  padding: 8vh 10% 0; /*height of the header */
   margin: 0 auto 0;
   background-color: var(--main-bg-color);
 }
