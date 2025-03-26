@@ -12,7 +12,11 @@
     const navButtons = document.querySelectorAll<HTMLAnchorElement>(
       ".nav_links_wrapper a"
     );
-    const currentPath = window.location.pathname.slice(1);
+    let currentPath = window.location.pathname;
+    // remove trailing and leading slashes
+    if (currentPath[currentPath.length - 1] === "/")
+      currentPath = currentPath.slice(0, -1);
+    if (currentPath[0] === "/") currentPath = currentPath.slice(1);
     navButtons.forEach((button) => {
       const hrefArray = button.href.split("/");
       const path = hrefArray[hrefArray.length - 1];
@@ -35,7 +39,7 @@
   }
 
   function setupScrollEffects() {
-    const nav = document.querySelector("nav") as HTMLElement | null;
+    const nav = document.querySelector(".nav_main_wrapper") as HTMLElement | null;
     const scrollTopButton = document.getElementById(
       "scroll_top"
     ) as HTMLElement | null;
@@ -72,8 +76,8 @@
   </div>
   <div class="nav-mobile-menu">
     <a href="/">Home</a>
-    <a href="#profile">Profile</a>
-    <a href="cv">CV</a>
+    <a href="/#profile">Profile</a>
+    <a href="/cv">CV</a>
   </div>
 </nav>
 <style>
