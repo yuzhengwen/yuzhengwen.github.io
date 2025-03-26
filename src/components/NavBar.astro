@@ -12,10 +12,15 @@
     const navButtons = document.querySelectorAll<HTMLAnchorElement>(
       ".nav_links_wrapper a"
     );
+    const currentPath = window.location.pathname.slice(1);
     navButtons.forEach((button) => {
-      if (button.href === window.location.href) {
+      const hrefArray = button.href.split("/");
+      const path = hrefArray[hrefArray.length - 1];
+      if (path === currentPath) {
         button.classList.add("active");
         button.setAttribute("aria-current", "page");
+      } else {
+        button.classList.remove("active");
       }
     });
   }
@@ -54,14 +59,15 @@
     <h1><a href="/" class="logo">yuzhengwen</a></h1>
     <div class="nav_links_wrapper">
       <a href="/">Home</a>
-      <a href="#profile">Profile</a>
+      <a href="/#profile">Profile</a>
       <a href="/cv">CV</a>
     </div><!--
     <img id="mobile_menu" src=`${baseUrl}/icons/menu.png` alt="Menu" /> -->
     <div id="mobile_menu">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#1f1f1f"
         ><path d="M0 0h24v24H0z" fill="none"></path><path
-          d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
+          d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg
+      >
     </div>
   </div>
   <div class="nav-mobile-menu">
