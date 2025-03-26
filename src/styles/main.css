@@ -136,7 +136,7 @@ body {
   padding: 0 10%;
   /* not needed now header is sticky
   margin: 8vh auto; 8vh is the height of the header */
-  margin: 5rem 0;
+  margin: 5rem auto;
 }
 
 .main-content section {
