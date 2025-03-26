@@ -5,7 +5,9 @@ import ProjectCard from "../layouts/ProjectCardLayout.astro";
 const projects = await getCollection("projects");
 ---
 
-<h1 id="my-projects" class="display-5">My Projects</h1>
+<h1 id="my-projects" class="display-5" style="scroll-margin-top: 7vh;">
+  My Projects
+</h1>
 <div class="row row-cols-1 row-cols-md-2 g-5">
   {projects.map((project) => <ProjectCard project={project} />)}
 </div>

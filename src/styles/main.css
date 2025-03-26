@@ -206,14 +206,15 @@ body {
 
 .landing-content h1 {
   /*color: var(--secondary);*/
-  margin-bottom: 1.5rem;
   background-image: linear-gradient(90deg, #6233cf, #a01e5b, #6233cf, #a01e5b);
 
   color: transparent;
   background-clip: text;
   background-size: 300%;
-  animation: gradient-shift 4s infinite linear;
+  animation: gradient-shift 2.5s infinite linear,
+    blink-caret 0.8s step-end infinite !important;
   --webkit-background-clip: text;
+  padding: 0.5rem 0;
 }
 @keyframes gradient-shift {
   0% {

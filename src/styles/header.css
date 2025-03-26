@@ -6,6 +6,19 @@ nav {
   flex-direction: column;
   width: 100%;
   z-index: 1000;
+  transition: height 0.2s;
+  height: 8vh;
+}
+
+.floating {
+  opacity: 0.7;
+  transition: 0.3s;
+  height: 6vh;
+}
+
+.floating a {
+  font-size: smaller;
+  transition: 0.3s;
 }
 
 .nav_main_wrapper {
@@ -16,13 +29,12 @@ nav {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 8vh;
+  height: 100%;
   background-color: var(--menuColor);
   text-transform: uppercase;
   transition: 1s;
   padding-left: 10%;
   padding-right: 10%;
-  z-index: 100;
   position: relative;
   z-index: 1000;
 }
@@ -69,17 +81,6 @@ nav .logo:hover {
 
 .active {
   color: var(--secondary);
-}
-
-.floating {
-  opacity: 0.7;
-  transition: 0.3s;
-  height: 6vh;
-}
-
-.floating a {
-  font-size: smaller;
-  transition: 0.3s;
 }
 
 #mobile_menu {
