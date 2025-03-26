@@ -136,7 +136,7 @@ body {
 }
 
 .main-content {
-  padding: 8vh 10% 0; /*height of the header */
+  padding: 8vh 10% 3rem; /*height of the header */
   margin: 0 auto 0;
   background-color: var(--main-bg-color);
 }
