@@ -1,5 +1,8 @@
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
+  // DOMContentLoaded for normal JS
+  // using astro client router, this won't be loaded after swapping out elements and re-rendering
+  // need to hook this astro event instead
+  document.addEventListener("astro:page-load", function () {
     setResponsive();
     setActiveNavOnLoad();
     setupScrollEffects();
