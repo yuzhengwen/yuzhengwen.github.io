@@ -1,6 +1,6 @@
 /* header stuff*/
 nav {
-  position: fixed;
+  position: sticky;
   top: 0;
   display: flex;
   flex-direction: column;
@@ -127,12 +127,7 @@ nav .logo:hover {
     display: block;
   }
 
-  header {
-    height: 10vh;
-  }
-
-  header h1 {
-    /*font-size: 4.5vw; */
+  nav h1 {
     font-size: 4vh;
   }
 
@@ -142,10 +137,6 @@ nav .logo:hover {
 
   #scroll_top {
     padding: 4%;
-  }
-
-  .floating a {
-    font-size: 100%;
   }
 
   nav {

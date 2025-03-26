@@ -9,10 +9,10 @@
   });
 
   function setActiveNavOnLoad() {
-    const headerButtons = document.querySelectorAll<HTMLAnchorElement>(
+    const navButtons = document.querySelectorAll<HTMLAnchorElement>(
       ".nav_links_wrapper a"
     );
-    headerButtons.forEach((button) => {
+    navButtons.forEach((button) => {
       if (button.href === window.location.href) {
         button.classList.add("active");
         button.setAttribute("aria-current", "page");

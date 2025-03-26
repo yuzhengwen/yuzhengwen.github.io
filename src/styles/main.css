@@ -18,6 +18,7 @@ body {
   background-color: var(--main-bg-color) !important;
   margin: 0;
   overflow-x: hidden;
+  height: fit-content;
 }
 #scroll_top {
   position: fixed;
@@ -126,13 +127,16 @@ body {
 #cv {
   width: 90%;
   height: 100vh;
-  padding-top: 8vh;
+  /* not needed now header is sticky
+  padding-top: 8vh;*/
   justify-self: center;
 }
 
 .main-content {
   padding: 0 10%;
-  margin: 8vh auto; /* 8vh is the height of the header */
+  /* not needed now header is sticky
+  margin: 8vh auto; 8vh is the height of the header */
+  margin: 5rem 0;
 }
 
 .main-content section {
@@ -203,22 +207,20 @@ body {
 .landing-content h1 {
   /*color: var(--secondary);*/
   margin-bottom: 1.5rem;
-  background-image: linear-gradient(90deg, #a01e5b, #6233cf, #3680b1, #a01e5b);
+  background-image: linear-gradient(90deg, #6233cf, #a01e5b, #6233cf, #a01e5b);
+
   color: transparent;
   background-clip: text;
-  background-size: 200%;
-  animation: gradient-shift 3s infinite linear;
+  background-size: 300%;
+  animation: gradient-shift 4s infinite linear;
   --webkit-background-clip: text;
 }
 @keyframes gradient-shift {
   0% {
     background-position: 0% 50%;
   }
-  50% {
-    background-position: 50% 100%;
-  }
   100% {
-    background-position: 0% 50%;
+    background-position: 100% 50%;
   }
 }
 

@@ -1,0 +1,49 @@
+<div class="typewriter-container">
+  <h1 class="typewriter-text">Hello, I'm Zhengwen</h1>
+</div>
+<style>
+  .typewriter-container {
+    display: inline-block;
+  }
+  .typewriter-text {
+    border-right: 6px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: blink-caret 0.8s step-end infinite;
+  }
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: white;
+    }
+  }
+</style>
+<script>
+  function typeWriter(typewriterElement: HTMLElement, text: string, i: number) {
+    if (i < text.length) {
+      typewriterElement.innerHTML += text.charAt(i);
+      i++;
+      setTimeout(() => typeWriter(typewriterElement, text, i), 200);
+    } else {
+      setTimeout(() => restartTypewriter(typewriterElement, text), 2000);
+    }
+  }
+  function restartTypewriter(typewriterElement: HTMLElement, text: string) {
+    if (typewriterElement) typewriterElement.innerHTML = "";
+    typeWriter(typewriterElement, text, 0);
+  }
+  document.addEventListener("astro:page-load", () => {
+    const typewriterElement = document.querySelector(
+      ".typewriter-text"
+    ) as HTMLElement | null;
+    if (typewriterElement) {
+      const text = typewriterElement.textContent || "";
+      typewriterElement.innerHTML = "";
+      typeWriter(typewriterElement, text, 0);
+    }
+  });
+</script>

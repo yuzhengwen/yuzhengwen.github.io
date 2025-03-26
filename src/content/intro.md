@@ -1,4 +1,3 @@
-# Hi, I'm Zhengwen
 
 That's me! ->  
 I am doing a double degree in **Computer Engineering & Economics** at NTU.  
