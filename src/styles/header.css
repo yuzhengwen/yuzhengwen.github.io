@@ -174,9 +174,6 @@ nav .logo:hover {
 }
 /* for when screen is too short */
 @media screen and (max-height: 750px) {
-  .nav_links_wrapper {
-    display: none;
-  }
   .nav_main_wrapper {
     height: 4rem !important;
   }
