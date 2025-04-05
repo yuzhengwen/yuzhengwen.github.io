@@ -4,6 +4,7 @@
 <style>
   .typewriter-container {
     display: inline-block;
+    width: fit-content;
   }
   .typewriter-text {
     border-right: 6px solid;
@@ -19,6 +20,22 @@
     }
     50% {
       border-color: white;
+    }
+  }
+  
+  @media screen and (max-width: 1150px) {
+    .typewriter-text {
+      font-size: 2rem;
+    }
+  }
+  @media screen and (max-width: 900px) {
+    .typewriter-text {
+      font-size: 1.6rem;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .typewriter-text {
+      font-size: 2rem;
     }
   }
 </style>

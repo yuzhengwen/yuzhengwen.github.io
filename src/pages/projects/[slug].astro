@@ -29,27 +29,30 @@ const { title, coverImg, description, source, link } = project.data;
 
 <Layout>
   <div class="main-content">
-    <div class="post-header">
-      <h1 class="display-5">{title}</h1>
-      <a href="/">Back to home <i class="bi bi-arrow-90deg-left"></i></a>
+    <div class="post-content">
+      <div class="post-header">
+        <h1 class="display-5">{title}</h1>
+        <a href="/">Back to home <i class="bi bi-arrow-90deg-left"></i></a>
+      </div>
+      <Picture src={coverImg} class="card-img-top" alt="Yu Parkin" />
+      <a href={source} class="btn btn-primary">Source Code</a>
+      <a href={link} class="btn btn-primary">Link to Project</a>
+      <p class="lead">Project Description: {description}</p>
+      <Content />
     </div>
-    <Picture src={coverImg} class="card-img-top" alt="Yu Parkin" />
-    <a href={source} class="btn btn-primary">Source Code</a>
-    <a href={link} class="btn btn-primary">Link to Project</a>
-    <p class="lead">Project Description: {description}</p>
-    <Content />
   </div>
 </Layout>
 
 <style>
-  .main-content {
+  .post-content {
+    margin: 0 auto 0;
     width: 75%;
   }
-  .main-content * {
+  .post-content * {
     margin: 1rem 0;
   }
   @media screen and (max-width: 768px) {
-    .main-content {
+    .post-content {
       width: 100%;
     }
   }
