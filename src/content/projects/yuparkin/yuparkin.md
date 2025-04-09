@@ -11,6 +11,6 @@ skills:
 
 ### Development
 
-Tech stack choice
+This was my first venture into using Vue, having used React for many projects. It was also solving a real-life problem I had.
 
 ### Process

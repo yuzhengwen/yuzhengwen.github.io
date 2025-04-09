@@ -5,7 +5,7 @@ type: "app"
 link: "https://nice-dune-0a1cdaf00.6.azurestaticapps.net/"
 source: "https://github.com/yuzhengwen/YuzuDo"
 coverImg: "../images/YuzuDo-Home.png"
-skills: [Django, 'Azure (App Service, Static Web App, PostgreSQL)']
+skills: [Django, Azure App Service, Azure SWA, Azure PostgreSQL]
 ---
 
 ## Yuzu Do
