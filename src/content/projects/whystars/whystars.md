@@ -18,7 +18,7 @@ skills:
     Python,
     BeautifulSoup,
   ]
-coverImg: "../images/WhyStars-Timetable.png"
+coverImg: "../images/WhyStars-Timetable.jpeg"
 ---
 
 ## Why Stars
