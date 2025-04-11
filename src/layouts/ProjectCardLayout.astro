@@ -6,18 +6,20 @@ type Props = {
   project: CollectionEntry<"projects">;
 };
 const { project } = Astro.props;
-const { title, skills, source, link, description, coverImg } = project.data;
+const { title, skills, source, link, description, coverImg, type } = project.data;
 ---
 
-<div class="col">
+<div class="col project-card">
   <div class="card h-100">
     <Picture
       src={coverImg}
       class="card-img-top"
       alt="Yu Parkin"
+      transition:name=`${title}`
     />
     <div class="card-body">
       <h5 class="card-title">{title}</h5>
+      <p class="project-type" hidden>{type}</p>
       <p class="card-text">{description}</p>
       <div class="card-text-bottom">
         <a
@@ -48,5 +50,8 @@ const { title, skills, source, link, description, coverImg } = project.data;
   img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    object-position: top;
+    aspect-ratio: 16 / 9; /* or 4 / 3, 1 / 1 for square, etc. */
   }
 </style>
