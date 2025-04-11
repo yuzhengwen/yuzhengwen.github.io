@@ -6,10 +6,10 @@ type Props = {
   project: CollectionEntry<"projects">;
 };
 const { project } = Astro.props;
-const { title, skills, source, link, description, coverImg } = project.data;
+const { title, skills, source, link, description, coverImg, type } = project.data;
 ---
 
-<div class="col">
+<div class="col project-card">
   <div class="card h-100">
     <Picture
       src={coverImg}
@@ -19,6 +19,7 @@ const { title, skills, source, link, description, coverImg } = project.data;
     />
     <div class="card-body">
       <h5 class="card-title">{title}</h5>
+      <p class="project-type" hidden>{type}</p>
       <p class="card-text">{description}</p>
       <div class="card-text-bottom">
         <a

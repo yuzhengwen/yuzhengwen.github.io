@@ -3,11 +3,50 @@ import { getCollection, render } from "astro:content";
 import ProjectCard from "../layouts/ProjectCardLayout.astro";
 
 const projects = await getCollection("projects");
+
+const types = projects.map((project) => project.data.type);
+const uniqueTypes = [...new Set(types)];
 ---
+
+<script>
+  document.addEventListener("astro:page-load", function () {
+    const projectFilter = document.getElementById(
+      "project-filter",
+    ) as HTMLSelectElement;
+      const projectCards = document.querySelectorAll(
+        ".project-card",
+      ) as NodeListOf<HTMLElement>;
+
+    projectFilter.addEventListener("change", () => {
+      const filterValue = projectFilter?.value;
+      projectCards.forEach((projectDiv) => {
+        const projectType =
+          projectDiv.getElementsByClassName("project-type")[0].textContent;
+        if (filterValue === "All" || projectType === filterValue) {
+          projectDiv.style.display = "block";
+        } else {
+          projectDiv.style.display = "none";
+        }
+      });
+    });
+  });
+</script>
 
 <h1 id="my-projects" class="display-5" style="scroll-margin-top: 7vh;">
   My Projects
 </h1>
+<div id="filter-projects">
+  <span>Filter Projects: </span>
+  <select
+    class="form-select"
+    aria-label="Select"
+    name="project-filter"
+    id="project-filter"
+  >
+    <option selected>All</option>
+    {uniqueTypes.map((type) => <option value={type}>{type}</option>)}
+  </select>
+</div>
 <div class="row row-cols-1 row-cols-md-2 g-5">
   {projects.map((project) => <ProjectCard project={project} />)}
 </div>
@@ -15,5 +54,15 @@ const projects = await getCollection("projects");
   h1 {
     text-align: center;
     margin-bottom: 2rem;
+  }
+  .form-select {
+    width: fit-content;
+  }
+  #filter-projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
   }
 </style>
