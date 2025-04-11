@@ -34,7 +34,7 @@ const { title, coverImg, description, source, link } = project.data;
         <h1 class="display-5">{title}</h1>
         <a href="/">Back to home <i class="bi bi-arrow-90deg-left"></i></a>
       </div>
-      <Picture src={coverImg} class="card-img-top" alt="Yu Parkin" />
+      <Picture src={coverImg} class="card-img-top" alt="Yu Parkin" transition:name=`${title}`/>
       <a href={source} class="btn btn-primary">Source Code</a>
       <a href={link} class="btn btn-primary">Link to Project</a>
       <p class="lead">Project Description: {description}</p>
