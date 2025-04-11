@@ -13,12 +13,11 @@ const uniqueTypes = [...new Set(types)];
     const projectFilter = document.getElementById(
       "project-filter",
     ) as HTMLSelectElement;
-      const projectCards = document.querySelectorAll(
-        ".project-card",
-      ) as NodeListOf<HTMLElement>;
+    const projectCards = document.querySelectorAll(
+      ".project-card",
+    ) as NodeListOf<HTMLElement>;
 
-    projectFilter.addEventListener("change", () => {
-      const filterValue = projectFilter?.value;
+    const filterProjects = (filterValue: string) => {
       projectCards.forEach((projectDiv) => {
         const projectType =
           projectDiv.getElementsByClassName("project-type")[0].textContent;
@@ -28,6 +27,23 @@ const uniqueTypes = [...new Set(types)];
           projectDiv.style.display = "none";
         }
       });
+    };
+
+    const updateURLParam = (key: string, value: string) => {
+      const url = new URL(window.location.href);
+      url.searchParams.set(key, value);
+      window.history.replaceState({}, "", url.toString());
+    };
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialFilter = urlParams.get("filter") || "All";
+    projectFilter.value = initialFilter;
+    filterProjects(initialFilter);
+
+    projectFilter.addEventListener("change", () => {
+      const filterValue = projectFilter.value;
+      filterProjects(filterValue);
+      updateURLParam("filter", filterValue);
     });
   });
 </script>
