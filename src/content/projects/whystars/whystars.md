@@ -28,3 +28,13 @@ No need to manually plan your timetables.
 WhyStars' standout feature is that it will automatically generate valid timetables for you based on the courses you select, and the constraints that are given. Not happy with the generated timetables? You can still manually play around with your timings with the beautiful timetable user interface.  
 
 Don't worry if you closed the website accidentally, because your timetable will persist (locally). If you would like, you can create an account and save multiple timetables into your account! You will be able to load them in and access/edit your timetables from any device!
+
+### Some things I learnt building this
+React Server/Client Component Architecture  
+Server-side Pagination + Debounced Search using URL Parameters  
+Different data fetching patterns  
+Different caching methods in Next.js  
+Optimizing with static/dynamic rendering  
+Dynamic routing  
+API routes  
+Some really complicated CSS for making the Timetable UI  
