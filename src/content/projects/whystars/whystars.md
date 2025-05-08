@@ -1,7 +1,7 @@
 ---
 title: "Why Stars"
 description: "A new way to plan your timetable. Why Stars?"
-type: "app"
+type: "App"
 link: "https://mods.yuzwen.com"
 source: "https://github.com/yuzhengwen/whystars"
 skills:

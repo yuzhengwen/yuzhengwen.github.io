@@ -1,7 +1,7 @@
 ---
 title: "Yuzu Gallery"
 description: "Come see my art! Create easily accessible favourites!"
-type: "app"
+type: "App"
 link: "https://black-bush-056643400.6.azurestaticapps.net/"
 source: "https://github.com/yuzhengwen/YuzuGallery"
 skills:

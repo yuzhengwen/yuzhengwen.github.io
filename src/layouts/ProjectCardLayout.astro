@@ -6,7 +6,8 @@ type Props = {
   project: CollectionEntry<"projects">;
 };
 const { project } = Astro.props;
-const { title, skills, source, link, description, coverImg, type } = project.data;
+const { title, skills, source, link, description, coverImg, type } =
+  project.data;
 ---
 
 <div class="col project-card">
@@ -28,8 +29,20 @@ const { title, skills, source, link, description, coverImg, type } = project.dat
           href=`/projects/${title}`>Learn More</a
         >
         <div class="card-links">
-          <a href={link}>Link</a>
-          <a href={source}>Source</a>
+          {
+            link && (
+              <a href={link} target="_blank" rel="noopener noreferrer">
+                Link
+              </a>
+            )
+          }
+          {
+            link && (
+              <a href={source} target="_blank" rel="noopener noreferrer">
+                Source
+              </a>
+            )
+          }
         </div>
       </div>
     </div>
