@@ -1,0 +1,24 @@
+.click-effect {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(128, 128, 128, 0.2);
+    border: 2px solid rgba(124, 124, 124, 0.3);
+    pointer-events: none;
+    animation: click-animation 0.3s ease-out;
+    z-index: 1000;
+    margin-left: -25px;
+    margin-top: -25px;
+}
+
+@keyframes click-animation {
+  0% {
+    transform: scale(.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.25);
+    opacity: 0;
+  }
+}

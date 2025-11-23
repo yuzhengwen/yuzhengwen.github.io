@@ -8,12 +8,7 @@ const types = projects.map((project) => project.data.type);
 const uniqueTypes = [...new Set(types)];
 ---
 
-<script>
-  import { initializeFilter } from "../scripts/filterProjects";
-  document.addEventListener("astro:page-load", function () {
-    initializeFilter();
-  });
-</script>
+<script src="../scripts/filterProjects.ts"></script>
 
 <h1 id="my-projects" class="display-5" style="scroll-margin-top: 7vh;">
   My Projects

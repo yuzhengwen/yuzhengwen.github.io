@@ -2,6 +2,7 @@
 @import "footer.css";
 @import "bootstrap-icons/font/bootstrap-icons.css";
 @import "landing.css";
+@import "click.css";
 
 * {
   box-sizing: border-box;
