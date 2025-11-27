@@ -1,6 +1,6 @@
 ---
 title: "Why Stars"
-description: "A new way to plan your timetable. Why Stars?"
+description: "A much needed upgrade for students to plan their timetable properly"
 type: "App"
 link: "https://mods.yuzwen.com"
 source: "https://github.com/yuzhengwen/whystars"
@@ -15,16 +15,34 @@ skills:
     Neon,
     PrismaORM,
     Vercel,
-    Python,
-    BeautifulSoup,
+    Cheerio,
+    Cloudflare,
+    S3
   ]
 coverImg: "../images/WhyStars-Timetable.jpeg"
 ---
 
-## Why Stars
+## Features
+- All information **automatically kept up to date** every semester
+- View all module information, timings
+- One click to generate **all possible combinations** of indexes to take, with optional constraints such as blacklisted/whitelisted days/time periods, locking specific indexes, etc.
+- **Intuitive timetable interface** to manually select each mod index
+- Local save without logging in. Data is saved in browser
+- Optional cloud save (cross-device sync) and timetable loadouts
+  
+## Tools Used
+#### Frontend Stack
+- Next.js for Static Site Generation (SSG), Server Side Rendering (SSR), Incremental Static Regeneration (ISR), caching etc.
+  - Static pages such as "About" or "Feedback" statically generated at build time so that HTML is directly served when requested
+  - Mod pages are statically generated at build time, but also periodically updated using ISR
+- Zustand for global state management
+- Tailwind/Shadcn components used for styling 
 
-No need to manually plan your timetables.  
+#### Auth Stack
+- Auth.js
+- Neon with Prisma DB Connector
 
-WhyStars' standout feature is that it will automatically generate valid timetables for you based on the courses you select, and the constraints that are given. Not happy with the generated timetables? You can still manually play around with your timings with the beautiful timetable user interface.  
-
-Don't worry if you closed the website accidentally, because your timetable will persist (locally). If you would like, you can create an account and save multiple timetables into your account! You will be able to load them in and access/edit your timetables from any device!
+#### Backend (Data Collection)
+- Cheerio for HTML parsing and extracting information
+- Vercel Functions to run CRON job periodically to keep information up to date
+- S3 compatible storage (Cloudflare R2) for storing data 
