@@ -145,14 +145,12 @@ nav .logo:hover {
 
 @media (hover: hover) {
   #mobile_menu:hover svg {
-    transform: scale(1.1);
     fill: var(--secondary);
   }
 }
 
 #mobile_menu:active svg,
 #mobile_menu:focus-visible svg {
-  transform: scale(1.1);
   fill: var(--secondary);
 }
 
