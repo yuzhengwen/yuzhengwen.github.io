@@ -72,6 +72,9 @@ footer a:focus-visible::after {
   --bs-btn-hover-color: var(--text-default);
   --bs-btn-hover-bg: var(--secondary-dark);
   --bs-btn-hover-border-color: var(--secondary-dark);
+  --bs-btn-active-color: var(--text-default);
+  --bs-btn-active-bg: var(--secondary-dark);
+  --bs-btn-active-border-color: var(--secondary-dark);
 }
 
 .btn-primary {
@@ -81,6 +84,9 @@ footer a:focus-visible::after {
   --bs-btn-hover-color: var(--text-default);
   --bs-btn-hover-bg: var(--secondary-dark);
   --bs-btn-hover-border-color: var(--secondary-dark);
+  --bs-btn-active-color: var(--text-default);
+  --bs-btn-active-bg: var(--secondary-dark);
+  --bs-btn-active-border-color: var(--secondary-dark);
 }
 
 #scroll_top {
