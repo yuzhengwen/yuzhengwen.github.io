@@ -6,8 +6,8 @@ skills:
   [
     Flutter, Dart, Supabase, Google API, data.gov.sg API
   ]
-link: "https://github.com/yuzhengwen/park-buddy"
-coverImg: ""
+source: "https://github.com/yuzhengwen/park-buddy"
+coverImg: "./images/parkbuddy.png"
 ---
 
 ## Problem 
@@ -37,6 +37,6 @@ Introduce additional features to support families and companies that share cars
 - Availability Updates  
 
 ![Park Buddy parking screen](./images/parking.png)
-![Park Buddy parking screen](./images/map.png)
-![Park Buddy parking screen](./images/session.png)
-![Park Buddy parking screen](./images/family.png)  
+![Park Buddy map screen](./images/map.png)
+![Park Buddy parking session](./images/session.png)
+![Park Buddy family screen](./images/family.png)  
