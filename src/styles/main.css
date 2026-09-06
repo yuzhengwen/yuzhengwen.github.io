@@ -7,9 +7,9 @@
 * {
   box-sizing: border-box;
   --text-default: #ddd;
-  --text-default-dark: 212529;
-  --secondary: #ac5a73;
-  --secondary-dark: #7e2d44;
+  --text-default-dark: #212529;
+  --secondary: #b44567;
+  --secondary-dark: #8b2945;
   --main-bg-color: #e3e3e6;
   --menuColor: #212142 /* #2f2f4e*/;
   --bg-black: #000000;
@@ -28,6 +28,61 @@ body {
     #c04f88 100%
   );
 }
+
+a {
+  color: var(--secondary);
+  transition: color 0.25s ease;
+}
+
+a:hover {
+  color: var(--secondary-dark);
+}
+
+.main-content .card-links a,
+footer a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.main-content .card-links a::after,
+footer a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -0.15rem;
+  left: 0;
+  height: 1px;
+  background-color: var(--secondary-dark);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.main-content .card-links a:hover::after,
+.main-content .card-links a:focus-visible::after,
+footer a:hover::after,
+footer a:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.btn-outline-primary {
+  --bs-btn-color: var(--secondary);
+  --bs-btn-border-color: var(--secondary);
+  --bs-btn-hover-color: var(--text-default);
+  --bs-btn-hover-bg: var(--secondary-dark);
+  --bs-btn-hover-border-color: var(--secondary-dark);
+}
+
+.btn-primary {
+  --bs-btn-color: var(--text-default);
+  --bs-btn-bg: var(--secondary);
+  --bs-btn-border-color: var(--secondary);
+  --bs-btn-hover-color: var(--text-default);
+  --bs-btn-hover-bg: var(--secondary-dark);
+  --bs-btn-hover-border-color: var(--secondary-dark);
+}
+
 #scroll_top {
   position: fixed;
   bottom: 5%;
@@ -52,7 +107,7 @@ body {
 }
 
 #scroll_top:hover {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: var(--secondary);
   transition: all 0.3s;
 }
 
@@ -88,12 +143,30 @@ body {
 /* Card */
 
 .card {
-  animation: appear ease-in-out;
-  animation-timeline: view();
-  animation-range: entry 0% cover 40%;
   height: fit-content;
   box-shadow: 6px 8px 14px 2px rgba(0, 0, 0, 0.3);
   display: flex;
+}
+
+.card,
+.skill-card {
+  opacity: 0;
+  transform: translate3d(0, 0.75rem, 0) scale(0.95);
+  filter: blur(3px);
+  transition:
+    opacity 0.55s ease,
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.55s ease;
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform, filter;
+}
+
+.card.is-visible,
+.skill-card.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+  filter: blur(0);
+  will-change: auto;
 }
 
 .card a {
@@ -116,17 +189,13 @@ body {
   margin: 0 1rem;
 }
 
-@keyframes appear {
-  0% {
-    opacity: 0.5;
-    transform: translateY(20%);
-    scale: 0.8;
-  }
-
-  100% {
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .skill-card {
     opacity: 1;
-    transform: translateY(0);
-    scale: 1;
+    transform: none;
+    filter: none;
+    transition: none;
   }
 }
 

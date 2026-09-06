@@ -55,8 +55,32 @@ nav a {
   display: flex;
   align-items: center;
   color: var(--text-default);
+  position: relative;
+  transition:
+    color 0.25s ease,
+    background-color 0.25s ease,
+    transform 0.25s ease;
+}
 
-  transition: 0.3s;
+.nav_links_wrapper a::after,
+.nav-mobile-menu a::after {
+  content: "";
+  position: absolute;
+  right: 12%;
+  bottom: 0.65rem;
+  left: 12%;
+  height: 2px;
+  border-radius: 2px;
+  background-color: var(--secondary);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.nav-mobile-menu a::after {
+  right: 35%;
+  bottom: 0.5rem;
+  left: 35%;
 }
 
 nav h1 {
@@ -71,15 +95,35 @@ nav .logo:hover {
   color: var(--secondary);
 }
 
-.nav_links_wrapper a:hover,
-.nav-mobile-menu a:hover {
-  color: var(--secondary);
-  background-color: rgb(180, 183, 189, 0.2);
-  transition: 0.3s;
-}
-
 .active {
   color: var(--secondary);
+}
+
+@media (hover: hover) {
+  .nav_links_wrapper a:hover,
+  .nav-mobile-menu a:hover {
+    color: var(--secondary);
+    transform: translateY(-2px);
+  }
+
+  .nav_links_wrapper a:hover::after,
+  .nav-mobile-menu a:hover::after {
+    transform: scaleX(1);
+  }
+}
+
+.nav_links_wrapper a:focus-visible,
+.nav-mobile-menu a:focus-visible,
+.nav_links_wrapper a:active,
+.nav-mobile-menu a:active {
+  color: var(--secondary);
+}
+
+.nav_links_wrapper a:focus-visible::after,
+.nav-mobile-menu a:focus-visible::after,
+.nav_links_wrapper a:active::after,
+.nav-mobile-menu a:active::after {
+  transform: scaleX(1);
 }
 
 #mobile_menu {
