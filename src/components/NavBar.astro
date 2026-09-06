@@ -40,11 +40,13 @@
 
   function setupScrollEffects() {
     const nav = document.querySelector(".nav_main_wrapper") as HTMLElement | null;
+    const navMobile = document.querySelector(".nav-mobile-menu");
     const scrollTopButton = document.getElementById(
       "scroll_top"
     ) as HTMLElement | null;
 
     window.addEventListener("scroll", () => {
+      navMobile?.classList.remove("show-menu");
       if (nav) nav.classList.toggle("floating", window.scrollY > 50);
       if (scrollTopButton)
         scrollTopButton.classList.toggle("show", window.scrollY > 0);

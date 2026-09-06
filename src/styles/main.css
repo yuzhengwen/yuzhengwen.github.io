@@ -123,13 +123,8 @@ footer a:focus-visible::after {
   animation: fade_in 0.5s;
 }
 
-#scroll_top:hover {
-  background-color: var(--secondary);
-  transition: all 0.3s;
-}
-
 #scroll_top:active {
-  scale: 0.7;
+  scale: 0.8;
   transition: all 0.3s;
 }
 
